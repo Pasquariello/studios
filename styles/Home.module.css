@@ -71,14 +71,6 @@
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-
 /*  NEW  */
 .nav{
   position: absolute;
@@ -109,18 +101,34 @@
  
 }
 
-@media (max-width: 600px) {
-  .headerTextContainer {
-    padding-left: 0px;
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 400px;
+}
 
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
 
-  }
-  .headerText {
-    font-size: 1.8rem;
-  }
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
 }
 
 
@@ -145,33 +153,45 @@
 }
 
 
-.motionContainer {
-  /* width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: rgba(192, 146, 146, 0.2);
-  padding: 20px; */
-  /* border-radius: 30px; */
+.wrapper {
+  display: flex;
+}
+
+  
+.splash {
+  /* position: absolute; */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  clip-path: path(
+    "M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z"
+  );
 }
 
 
-.wrapper {
-  max-width: 750px;
-  /* height: 150px; */
-  /* top: 50%;
-  left: 50%; */
-  /* transform: translateX(-50%) translateY(-50%); */
+  @media (max-width: 600px) {
+    .headerTextContainer {
+      padding-left: 0px;
+      /* display: flex; */
+      justify-content: center;
+      align-items: center;
+    }
+    .headerText {
+      font-size: 1.8rem;
+    }
+    .grid {
+      width: 100%;
+      flex-direction: column;
+    }
+    .wrapper {
+      flex-direction: column;
+    }
+    .card {
+      margin: 0.5rem;
+      padding: 1rem;
+      width: 400px;
+    }
   }
 
-  
-  .splash {
-    /* position: absolute; */
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    clip-path: path(
-      "M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z"
-    );
-  }
   
