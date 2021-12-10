@@ -4,6 +4,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 import Particles from "react-tsparticles";
+import { Typography } from '@mui/material';
+import ParticleComponent from '../components/ParticleComponent';
 
 
 const Home: NextPage = () => {
@@ -29,113 +31,22 @@ const Home: NextPage = () => {
       
       <header className={styles.heroContainer}>
         <nav className={styles.nav}>
-          <p>Connect</p>
+          <p className={styles.navItem}>Connect</p>
+          <p className={styles.navItem}>About Us</p>
         </nav>
-        {/* <Image
-          layout="fill"
-          // width="1"
-          // height="1"
-          alt=""
-          className={styles.heroImage}
-          src="/static/images/ramon-salinero-vEE00Hx5d0Q-unsplash.jpg"
-        /> */}
-
-        <div style={{zIndex: 1, color: 'white'}}>
+      
+        <div className={styles.headerTextContainer}>
+          <Typography className={styles.headerText} variant="h2">Software Development <br/> Reimagined</Typography>
         </div>
-
-        <div className={styles.headerText}>
-          <h3>Software Development <br/> Reimagined</h3>
-        </div>
-
-        <Particles
-      id="tsparticles"
-      init={particlesInit}
-      loaded={particlesLoaded}
-      options={{
-        background: {
-          color: {
-            value: "#0d47a1",
-          },
-        },
-        fpsLimit: 60,
-        interactivity: {
-          events: {
-            onClick: {
-              enable: true,
-              mode: "push",
-            },
-            onHover: {
-              enable: true,
-              mode: "repulse",
-            },
-            resize: true,
-          },
-          modes: {
-            bubble: {
-              distance: 400,
-              duration: 2,
-              opacity: 0.8,
-              size: 40,
-            },
-            push: {
-              quantity: 4,
-            },
-            repulse: {
-              distance: 200,
-              duration: 0.4,
-            },
-          },
-        },
-        particles: {
-          color: {
-            value: "#ffffff",
-          },
-          links: {
-            color: "#ffffff",
-            distance: 150,
-            enable: true,
-            opacity: 0.5,
-            width: 1,
-          },
-          collisions: {
-            enable: true,
-          },
-          move: {
-            direction: "none",
-            enable: true,
-            outMode: "bounce",
-            random: false,
-            speed: 6,
-            straight: false,
-          },
-          number: {
-            density: {
-              enable: true,
-              value_area: 800,
-            },
-            value: 80,
-          },
-          opacity: {
-            value: 0.5,
-          },
-          shape: {
-            type: "circle",
-          },
-          size: {
-            random: true,
-            value: 5,
-          },
-        },
-        detectRetina: true,
-      }}
-    />
+  
+        <ParticleComponent/>  
 
       </header>
-      
+      test
 
 
       <main className={styles.main}>
-       
+        
         
       </main>
 
