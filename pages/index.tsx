@@ -9,7 +9,7 @@ import ParticleComponent from '../components/ParticleComponent';
 
 import { motion, useViewportScroll, useTransform, Variants} from "framer-motion";
   
-import WebIcon from '@mui/icons-material/Web';
+import WebAssetIcon from '@mui/icons-material/WebAsset';
 import MobileScreenShareIcon from '@mui/icons-material/MobileScreenShare';
 import CloudQueueIcon from '@mui/icons-material/CloudQueue';
 
@@ -69,7 +69,7 @@ const Home: NextPage = () => {
           m: 12,
         }}>
           <Box sx={{textAlign: 'center'}}>
-              <WebIcon sx={{fontSize: 72}}/>
+              <WebAssetIcon sx={{fontSize: 72}}/>
               <Typography>Web</Typography>
           </Box>
           <Box sx={{textAlign: 'center'}}>
@@ -109,9 +109,19 @@ const Home: NextPage = () => {
             </div>
           </motion.div>
         </motion.div>
-
         {/* <div style={{height: '5000px', background: 'red' }}></div> */}
       </main>
+      <Box sx={{
+          width: '100%',
+          p: 8,
+          my: 12,
+          // background: 'rgb(13, 71, 161)',
+          // background: 'rgb(2,0,36)',
+          background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)',
+        }}>
+          <Typography variant="h4" color="white" my={2}>Whats stopping you?</Typography>
+          <Typography color="white">Lets work together to deliver high performing, high impact software to the world</Typography>
+        </Box>
 
     
 
