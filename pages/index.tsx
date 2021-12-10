@@ -4,12 +4,14 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 import Particles from "react-tsparticles";
-import { Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import ParticleComponent from '../components/ParticleComponent';
 
 import { motion, useViewportScroll, useTransform, Variants} from "framer-motion";
   
-
+import WebIcon from '@mui/icons-material/Web';
+import MobileScreenShareIcon from '@mui/icons-material/MobileScreenShare';
+import CloudQueueIcon from '@mui/icons-material/CloudQueue';
 
 const Home: NextPage = () => {
   const { scrollYProgress } = useViewportScroll();
@@ -59,18 +61,36 @@ const Home: NextPage = () => {
       </header>
 
       <main className={styles.main}>
-        {/* <div className={styles.wrapper}> */}
-      {/* hello */}
-          <motion.div
+
+        <Stack direction="row" spacing={2} sx={{
+          width: '80%',
+          justifyContent: 'space-around',
+          color: '#BEBEBE',
+          m: 12,
+        }}>
+          <Box sx={{textAlign: 'center'}}>
+              <WebIcon sx={{fontSize: 72}}/>
+              <Typography>Web</Typography>
+          </Box>
+          <Box sx={{textAlign: 'center'}}>
+            <MobileScreenShareIcon sx={{fontSize: 72 }}/>
+            <Typography>Mobile</Typography>
+          </Box>
+          <Box sx={{textAlign: 'center'}}>
+            <CloudQueueIcon sx={{fontSize: 72 }}/>
+            <Typography>Cloud</Typography>
+          </Box>
+
+        </Stack>
+
+        <motion.div
           initial="offscreen"
           whileInView="onscreen"
           exit="offscreen"
           // viewport={{nce: true, amount: 0.8 }}
         >
-  
           <motion.div 
             className={styles.wrapper}
-            // className={styles.card}
             variants={cardVariants}
           >
             <div className={styles.card}>
@@ -80,27 +100,15 @@ const Home: NextPage = () => {
                 Software development is ever evolving, let us be the guiding force that helps you adapt and stay ahead of the curve.
               </Typography>
             </div>
-          {/* </motion.div>
 
-          <motion.div 
-            className={styles.card}
-            variants={cardVariants}
-          >  */}
-          <div className={styles.card}>
-
-          <Typography variant="h4" sx={{mb: 2}}>Innovation</Typography> 
-          
-          <Typography>
-            We specialize in the latest technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs.
-          </Typography>
-          </div>
-
+            <div className={styles.card}>
+              <Typography variant="h4" sx={{mb: 2}}>Innovation</Typography> 
+              <Typography>
+                We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs.
+              </Typography>
+            </div>
           </motion.div>
         </motion.div>
-
-  
-        {/* </div> */}
-
 
         {/* <div style={{height: '5000px', background: 'red' }}></div> */}
       </main>
