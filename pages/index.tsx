@@ -8,13 +8,13 @@ import Particles from "react-tsparticles";
 
 const Home: NextPage = () => {
 
-  const particlesInit = (main) => {
+  const particlesInit = (main: any) => {
     console.log(main);
 
     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
   };
 
-  const particlesLoaded = (container) => {
+  const particlesLoaded = (container: any ) => {
     console.log(container);
   };
 
