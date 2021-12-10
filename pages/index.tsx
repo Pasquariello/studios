@@ -7,19 +7,31 @@ import Particles from "react-tsparticles";
 import { Typography } from '@mui/material';
 import ParticleComponent from '../components/ParticleComponent';
 
+import { motion, useViewportScroll, useTransform, Variants} from "framer-motion";
+  
+
 
 const Home: NextPage = () => {
+  const { scrollYProgress } = useViewportScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [0.2, 4]);
 
-  const particlesInit = (main: any) => {
-    console.log(main);
 
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+  const cardVariants: Variants = {
+    offscreen: {
+      y: 300,
+    },
+    onscreen: {
+      y: 10,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.8
+      }
+    },
   };
 
-  const particlesLoaded = (container: any ) => {
-    console.log(container);
-  };
 
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -31,8 +43,11 @@ const Home: NextPage = () => {
       
       <header className={styles.heroContainer}>
         <nav className={styles.nav}>
+          <h3><em>Tech Design Studios</em></h3>
+          <div style={{display: 'flex'}}>
           <p className={styles.navItem}>Connect</p>
           <p className={styles.navItem}>About Us</p>
+          </div>
         </nav>
       
         <div className={styles.headerTextContainer}>
@@ -42,13 +57,33 @@ const Home: NextPage = () => {
         <ParticleComponent/>  
 
       </header>
-      test
-
 
       <main className={styles.main}>
-        
-        
+        <div className={styles.wrapper}>
+      {/* hello */}
+          <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          exit="offscreen"
+
+          // viewport={{nce: true, amount: 0.8 }}
+        >
+  
+          <motion.div 
+            variants={cardVariants}
+          > 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </motion.div>
+        </motion.div>
+
+  
+        </div>
+
+
+        {/* <div style={{height: '5000px', background: 'red' }}></div> */}
       </main>
+
+    
 
       <footer className={styles.footer}>
         <a
