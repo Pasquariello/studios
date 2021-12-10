@@ -65,25 +65,36 @@ const Home: NextPage = () => {
           initial="offscreen"
           whileInView="onscreen"
           exit="offscreen"
-          className={styles.wrapper}
           // viewport={{nce: true, amount: 0.8 }}
         >
   
           <motion.div 
-            className={styles.card}
-
+            className={styles.wrapper}
+            // className={styles.card}
             variants={cardVariants}
           >
-          <h3>Connection</h3> 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
-          </motion.div>
+            <div className={styles.card}>
+              <Typography variant="h4" sx={{mb: 2}}>Evolution</Typography> 
+              
+              <Typography>
+                Software development is ever evolving, let us be the guiding force that helps you adapt and stay ahead of the curve.
+              </Typography>
+            </div>
+          {/* </motion.div>
 
           <motion.div 
             className={styles.card}
             variants={cardVariants}
-          > 
-          <h3>Innovation</h3> 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+          >  */}
+          <div className={styles.card}>
+
+          <Typography variant="h4" sx={{mb: 2}}>Innovation</Typography> 
+          
+          <Typography>
+            We specialize in the latest technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs.
+          </Typography>
+          </div>
+
           </motion.div>
         </motion.div>
 
