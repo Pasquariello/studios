@@ -8,7 +8,7 @@ import Particles from "react-tsparticles";
 
 const ParticleComponent: NextComponentType = () => {
 
-
+// #0d47a1
   return (
         <Particles
           id="tsparticles"
@@ -19,7 +19,7 @@ const ParticleComponent: NextComponentType = () => {
           options={{
             background: {
               color: {
-                value: "#0d47a1",
+                value: "#0197F6",
               },
             },
             fullScreen: {

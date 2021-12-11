@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
+import { useState, useEffect, useLayoutEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 import Particles from "react-tsparticles";
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import ParticleComponent from '../components/ParticleComponent';
 
 import { motion, useViewportScroll, useTransform, Variants} from "framer-motion";
@@ -12,6 +13,8 @@ import { motion, useViewportScroll, useTransform, Variants} from "framer-motion"
 import WebAssetIcon from '@mui/icons-material/WebAsset';
 import MobileScreenShareIcon from '@mui/icons-material/MobileScreenShare';
 import CloudQueueIcon from '@mui/icons-material/CloudQueue';
+
+import ReactTextTransition, { presets } from "react-text-transition";
 
 const Home: NextPage = () => {
   const { scrollYProgress } = useViewportScroll();
@@ -32,8 +35,18 @@ const Home: NextPage = () => {
     },
   };
 
+  const texts = ["Engineering", "Designing", "Advising", "Delivering"];
+  const [ textIndex, setTextIndex ] = useState(0);
 
-  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTextIndex(textIndex + 1);
+
+    }, 1200);
+    return () => clearInterval(interval);
+
+  }, [textIndex]);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -53,7 +66,7 @@ const Home: NextPage = () => {
         </nav>
       
         <div className={styles.headerTextContainer}>
-          <Typography className={styles.headerText} variant="h2">Software Development <br/> Reimagined</Typography>
+          <Typography className={styles.headerText} variant="h1">Software Development <br/> Reimagined</Typography>
         </div>
   
         <ParticleComponent/>  
@@ -65,8 +78,8 @@ const Home: NextPage = () => {
         <Stack direction="row" spacing={2} sx={{
           width: '80%',
           justifyContent: 'space-around',
-          color: '#BEBEBE',
-          m: 12,
+          color: '#22333B',
+          mb: 8,
         }}>
           <Box sx={{textAlign: 'center'}}>
               <WebAssetIcon sx={{fontSize: 72}}/>
@@ -83,45 +96,124 @@ const Home: NextPage = () => {
 
         </Stack>
 
-        <motion.div
-          initial="offscreen"
-          whileInView="onscreen"
-          exit="offscreen"
-          // viewport={{nce: true, amount: 0.8 }}
+
+      <Box 
+        width="100%"
+        sx={{
+            background: 'linear-gradient(to right, #F24236, #0197F6)',
+            padding: '0.5rem',
+            position: 'relative',
+        }}
+      >
+        <Grid
+          container
+          sx={{
+            display: 'flex',  
+            position: 'relative', 
+            objectFit: 'contain', 
+            background:  'white', 
+            p: '40px',
+            borderRadius: 0,
+            color: "#22333B",
+            width:"100%"
+          }}
         >
-          <motion.div 
-            className={styles.wrapper}
-            variants={cardVariants}
-          >
-            <div className={styles.card}>
+
+          <Grid item direction="column" xs={12} sm={12} md={6}>
+            <Box mb={8}>
               <Typography variant="h4" sx={{mb: 2}}>Evolution</Typography> 
               
               <Typography>
                 Software development is ever evolving, let us be the guiding force that helps you adapt and stay ahead of the curve.
               </Typography>
-            </div>
+            </Box>
 
-            <div className={styles.card}>
+            <Box>
               <Typography variant="h4" sx={{mb: 2}}>Innovation</Typography> 
               <Typography>
                 We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs.
               </Typography>
-            </div>
-          </motion.div>
-        </motion.div>
-        {/* <div style={{height: '5000px', background: 'red' }}></div> */}
+            </Box>
+          </Grid>
+
+          <Grid 
+            item
+            xs={12} sm={12} md={6}
+            sx={{position: 'relative', objectFit: 'contain' }}
+          >
+            <Image
+              alt=""
+              src="/static/images/undraw_launching_re_tomg.svg"
+              layout="fill"
+            />
+          </Grid>    
+        </Grid>
+      </Box>
+      {/* End */}
+
+        <Grid
+          container
+          // flexDirection="row"
+          // direction={{ xs: 'column', sm: 'column', md: 'row' }}
+          m={16} 
+          sx={{
+            display:"flex",
+            justifyContent:"center",
+            alignItems:'center',
+            width:"100%",
+          }}
+          spacing={8}
+        >
+        <Grid item
+         xs={12} sm={6} 
+          height="500px"
+          sx={{display: 'flex',  position: 'relative', objectFit: 'contain', width: '100%'}}
+        >
+          <Image
+    
+            alt=""
+            src="/static/images/undraw_web_devices_re_m8sc.svg"
+            layout="fill"
+          />
+        </Grid>
+
+   
+        <Grid item  xs={12}  sm={6} 
+//sx={{border: '1px solid red'}}
+        >
+          <Box
+          sx={{
+            background: 'linear-gradient(0deg, rgba(10,9,8,1) 11%, rgba(34,51,59,1) 100%)', //'linear-gradient(white, 1%, #22333B, 70%, #0A0908)',
+            height: '400px',
+            width: '400px',
+            borderRadius: '50%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            // padding: 8,
+            color: '#F2F4F3',
+            flexDirection: 'column',
+          }}
+        >
+            <Typography variant="h4">
+            <ReactTextTransition
+              text={texts[textIndex % texts.length]}
+              springConfig={presets.gentle}
+              style={{ margin: "0 4px" }}
+              inline
+            />
+            <br/>
+         
+            Optimized Solutions.
+          </Typography>
+
+          <Button>Connect With Us</Button>
+          </Box>
+        </Grid>
+
+      
+      </Grid> 
       </main>
-      <Box sx={{
-          width: '100%',
-          p: 8,
-          my: 12,
-          // background: 'rgb(13, 71, 161)',
-          // background: 'rgb(2,0,36)',
-          background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)',
-        }}>
-          <Typography variant="h4" color="white" my={2}>Whats stopping you?</Typography>
-          <Typography color="white">Lets work together to deliver high performing, high impact software to the world</Typography>
-        </Box>
 
     
 
