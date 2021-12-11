@@ -150,27 +150,27 @@ const Home: NextPage = () => {
         </Grid>
       </Box>
       {/* End */}
-
+       
         <Grid
           container
           // flexDirection="row"
           // direction={{ xs: 'column', sm: 'column', md: 'row' }}
-          m={16} 
+          my={16} 
           sx={{
             display:"flex",
             justifyContent:"center",
             alignItems:'center',
             width:"100%",
           }}
-          spacing={8}
+          // spacing={4}
         >
         <Grid item
          xs={12} sm={6} 
-          height="500px"
-          sx={{display: 'flex',  position: 'relative', objectFit: 'contain', width: '100%'}}
+          height="400px"
+          sx={{position: 'relative', objectFit: 'contain' }}
         >
           <Image
-    
+
             alt=""
             src="/static/images/undraw_web_devices_re_m8sc.svg"
             layout="fill"
@@ -178,28 +178,35 @@ const Home: NextPage = () => {
         </Grid>
 
    
-        <Grid item  xs={12}  sm={6} 
-//sx={{border: '1px solid red'}}
-        >
-          <Box
+        <Grid 
+          item  
+          xs={12}  sm={6}
           sx={{
-            background: 'linear-gradient(0deg, rgba(10,9,8,1) 11%, rgba(34,51,59,1) 100%)', //'linear-gradient(white, 1%, #22333B, 70%, #0A0908)',
-            height: '400px',
-            width: '400px',
-            borderRadius: '50%',
+          
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            // padding: 8,
-            color: '#F2F4F3',
-            flexDirection: 'column',
           }}
         >
+          <Box
+            sx={{
+              background: 'linear-gradient(0deg, rgba(10,9,8,1) 11%, rgba(34,51,59,1) 100%)', //'linear-gradient(white, 1%, #22333B, 70%, #0A0908)',
+              height: '300px',
+              width: '300px',
+              borderRadius: '50%',
+              display: 'flex',
+              p:20,
+              justifyContent: 'center',
+              alignItems: 'center',
+              color: '#F2F4F3',
+              flexDirection: 'column',
+            }}
+          >
             <Typography variant="h4">
             <ReactTextTransition
               text={texts[textIndex % texts.length]}
               springConfig={presets.gentle}
-              style={{ margin: "0 4px" }}
+              // style={{ margin: "0 4px" }}
               inline
             />
             <br/>
@@ -213,6 +220,7 @@ const Home: NextPage = () => {
 
       
       </Grid> 
+
       </main>
 
     
