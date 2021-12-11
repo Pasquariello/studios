@@ -66,7 +66,7 @@ const Home: NextPage = () => {
         </nav>
       
         <div className={styles.headerTextContainer}>
-          <Typography className={styles.headerText} variant="h1">Software Development <br/> Reimagined</Typography>
+          <Typography className={styles.headerText} variant="h2">Software Development <br/> Reimagined</Typography>
         </div>
   
         <ParticleComponent/>  
