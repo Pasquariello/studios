@@ -2,38 +2,22 @@ import type { NextPage } from 'next'
 import { useState, useEffect, useLayoutEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link';
 import styles from '../styles/Home.module.css'
 
-import Particles from "react-tsparticles";
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import ParticleComponent from '../components/ParticleComponent';
-
-import { motion, useViewportScroll, useTransform, Variants} from "framer-motion";
   
 import WebAssetIcon from '@mui/icons-material/WebAsset';
 import MobileScreenShareIcon from '@mui/icons-material/MobileScreenShare';
 import CloudQueueIcon from '@mui/icons-material/CloudQueue';
 
 import ReactTextTransition, { presets } from "react-text-transition";
+import { height, width } from '@mui/system';
+
+
 
 const Home: NextPage = () => {
-  const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [0.2, 4]);
-
-
-  const cardVariants: Variants = {
-    offscreen: {
-      y: 300,
-    },
-    onscreen: {
-      y: 10,
-      transition: {
-        type: "spring",
-        bounce: 0.4,
-        duration: 0.8
-      }
-    },
-  };
 
   const texts = ["Engineering", "Designing", "Advising", "Delivering"];
   const [ textIndex, setTextIndex ] = useState(0);
@@ -56,31 +40,44 @@ const Home: NextPage = () => {
       </Head>
     
       
-      <header className={styles.heroContainer}>
+      <header className={styles.header}>
         <nav className={styles.nav}>
-          <h3><em>Tech Development Studios</em></h3>
+          <h3><em>Tecnicl</em></h3>
           <div style={{display: 'flex'}}>
           <p className={styles.navItem}>Connect</p>
-          <p className={styles.navItem}>About Us</p>
+
+          <Link href="/about">
+            <a className={styles.navItem}>About Us</a>
+          </Link>
           </div>
         </nav>
       
-        <div className={styles.headerTextContainer}>
-          <Typography className={styles.headerText} variant="h2">Software Development <br/> Reimagined</Typography>
-        </div>
-  
-        <ParticleComponent/>  
+        <div 
+          className={styles.headerTextContainer}  
+          style={{
 
+        }}>
+           
+            <Typography variant="h2">Software Development <br/> Reimagined</Typography>
+            {/* <h2>Software Development <br/> Reimagined</h2> */}
+     
+        </div>
+
+        <ParticleComponent/>  
       </header>
 
       <main className={styles.main}>
 
-        <Stack direction="row" spacing={2} sx={{
-          width: '80%',
-          justifyContent: 'space-around',
-          color: '#22333B',
-          mb: 8,
-        }}>
+        <Stack
+          direction="row" 
+          spacing={3} 
+          sx={{
+            width: '80%',
+            justifyContent: 'space-around',
+            color: '#22333B',
+            my: 8,
+          }}
+        >
           <Box sx={{textAlign: 'center'}}>
               <WebAssetIcon sx={{fontSize: 72}}/>
               <Typography>Web</Typography>
@@ -97,80 +94,101 @@ const Home: NextPage = () => {
         </Stack>
 
 
-      <Box 
-        width="100%"
-        sx={{
-            background: 'linear-gradient(to right, #F24236, #0197F6)',
-            padding: '0.5rem',
-            position: 'relative',
-        }}
-      >
-        <Grid
-          container
+
+        {/* Start */}
+        <Box 
           sx={{
-            display: 'flex',  
-            position: 'relative', 
-            objectFit: 'contain', 
-            background:  'white', 
-            p: '40px',
-            borderRadius: 0,
-            color: "#22333B",
-            width:"100%"
+              background: 'linear-gradient(to right, #F24236, #0197F6)',
+              padding: '0.5em',
+              position: 'relative',
+              mx: '4em'
           }}
         >
-
-          <Grid item direction="column" xs={12} sm={12} md={6}>
-            <Box mb={8}>
-              <Typography variant="h4" sx={{mb: 2}}>Evolution</Typography> 
-              
-              <Typography>
-                Software development is ever evolving, let us be the guiding force that helps you adapt and stay ahead of the curve.
-              </Typography>
-            </Box>
-
-            <Box>
-              <Typography variant="h4" sx={{mb: 2}}>Innovation</Typography> 
-              <Typography>
-                We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs.
-              </Typography>
-            </Box>
-          </Grid>
-
-          <Grid 
-            item
-            xs={12} sm={12} md={6}
-            sx={{position: 'relative', objectFit: 'contain' }}
+          <Grid
+            container
+            sx={{
+              display: 'flex',  
+              position: 'relative', 
+              objectFit: 'contain', 
+              background:  'white', 
+              p: {
+                xs: 5,
+                sm: 10,
+              },
+              borderRadius: 0,
+              color: "#22333B",
+              width:"100%",
+              height: '100%'
+            }}
           >
-            <Image
-              alt=""
-              src="/static/images/undraw_launching_re_tomg.svg"
-              layout="fill"
-            />
-          </Grid>    
-        </Grid>
-      </Box>
-      {/* End */}
-       
+
+            <Grid item direction="column" xs={12} sm={6}>
+              <Box mb={8}>
+                <Typography variant="h4" sx={{mb: 2}}>Evolution</Typography> 
+                
+                <Typography>
+                  Software development is ever evolving, let us be the guiding force that helps you adapt and stay ahead of the curve.
+                </Typography>
+              </Box>
+
+              <Box>
+                <Typography variant="h4" sx={{mb: 2}}>Innovation</Typography> 
+                <Typography>
+                  We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs.
+                </Typography>
+              </Box>
+            </Grid>
+
+            <Grid 
+              item
+              xs={12} 
+              sm={6}              
+              sx={{
+                position: 'relative', 
+                objectFit: 'contain',
+              }}
+            >
+      
+              <Image
+                alt=""
+                src="/static/images/undraw_launching_re_tomg.svg"
+                layout="fill"
+              />
+        
+            </Grid>    
+          </Grid>
+        </Box>
+        {/* End */}
+
+
+        {/* Start */}
+
         <Grid
           container
-          // flexDirection="row"
-          // direction={{ xs: 'column', sm: 'column', md: 'row' }}
-          my={16} 
+          my={{
+            xs: 4,
+            sm: 8,
+            md: 16,
+          }} 
+          px={2}
           sx={{
             display:"flex",
             justifyContent:"center",
             alignItems:'center',
             width:"100%",
+            // border: '1px solid red'
           }}
-          // spacing={4}
         >
         <Grid item
-         xs={12} sm={6} 
+          xs={12} sm={6} 
           height="400px"
-          sx={{position: 'relative', objectFit: 'contain' }}
+          sx={{
+            position: 'relative',
+            objectFit: 'contain',
+            // border: '1px solid red',
+          }}
         >
           <Image
-
             alt=""
             src="/static/images/undraw_web_devices_re_m8sc.svg"
             layout="fill"
@@ -182,48 +200,57 @@ const Home: NextPage = () => {
           item  
           xs={12}  sm={6}
           sx={{
-          
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            // border: '1px solid red'
           }}
         >
           <Box
             sx={{
               background: 'linear-gradient(0deg, rgba(10,9,8,1) 11%, rgba(34,51,59,1) 100%)', //'linear-gradient(white, 1%, #22333B, 70%, #0A0908)',
-              height: '300px',
-              width: '300px',
+              height: {
+                xs: '250px',
+                sm: '300px',
+              },
+              width: {
+                xs: '250px',
+                sm: '300px'
+              },
               borderRadius: '50%',
               display: 'flex',
-              p:20,
+              // p:20,
               justifyContent: 'center',
               alignItems: 'center',
               color: '#F2F4F3',
               flexDirection: 'column',
             }}
           >
-            <Typography variant="h4">
-            <ReactTextTransition
-              text={texts[textIndex % texts.length]}
-              springConfig={presets.gentle}
-              // style={{ margin: "0 4px" }}
-              inline
-            />
-            <br/>
-         
-            Optimized Solutions.
-          </Typography>
-
-          <Button>Connect With Us</Button>
+            <Box sx={{width: '50%'}}>
+            <Typography variant="h5">
+              <ReactTextTransition
+                text={texts[textIndex % texts.length]}
+                springConfig={presets.gentle}
+                // style={{ with: "100%", background: 'red' }}
+                // inline
+              />
+            </Typography>
+            <Typography variant="h5">
+              Optimized
+            </Typography>
+            <Typography variant="h5">
+              Solutions
+            </Typography>
+            </Box>
+            <Button>Connect With Us</Button>
           </Box>
         </Grid>
 
       
       </Grid> 
+        {/* End */}
 
       </main>
-
-    
 
       <footer className={styles.footer}>
         <a
