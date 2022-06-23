@@ -45,7 +45,7 @@ const Home: NextPage = () => {
           <div style={{display: 'flex'}}>
           <p className={styles.navItem}>Connect</p>
 
-          <Link href="/about">
+          <Link href="/services">
             <a className={styles.navItem}>What We Do</a>
           </Link>
           </div>
@@ -115,8 +115,8 @@ const Home: NextPage = () => {
 
             <Box>
               <Typography variant="h4" sx={{mb: 2}}>Innovation</Typography> 
-              <Link href="/about">
-            <a>About Us</a>
+              <Link href="/services">
+            <a>Services</a>
           </Link>
               <Typography>
                 We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs.

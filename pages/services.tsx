@@ -1,14 +1,14 @@
 import type { NextPage } from 'next'
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import MainLayout from '../Layouts/MainLayout';
 import Image from 'next/image'
-import styles from '../styles/About.module.css';
+import styles from '../styles/Services.module.css';
 import ParticleComponent from '../components/ParticleComponent';
 
 
-const About: NextPage = () => {
+const Services: NextPage = () => {
     return (
-        <MainLayout title="About Us">
+        <MainLayout title="Services">
             <header className={styles.header}>
 
             {/* Column 1 */}
@@ -50,9 +50,9 @@ const About: NextPage = () => {
             </header>
 
             {/* section start*/}
-                <Box px={5} py={10} className={styles.mainTagLineContainer}>
+                <Box px={5} py={16} className={styles.mainTagLineContainer}>
                     <div style={{maxWidth: 700}}>
-                    <Typography mb={4}>
+                    <Typography mb={4} variant="h4">
                         We Are Obsessed With Your Success
                     </Typography>
 
@@ -66,10 +66,40 @@ const About: NextPage = () => {
 
             {/* section start*/}
             <section>
-
-                <Typography mb={4}>
-                    SERVICE PLANS
+                <Typography 
+                    variant="h4"
+                    mb={4} 
+                    p={2}
+                    sx={{
+                        background: 'linear-gradient(to right, #F24236, #0197F6)',
+                        display: 'table',
+                        color: 'white',
+                    }}
+                >
+                    Services:
                 </Typography>
+
+                <div style={{maxWidth: 700}}>
+                    <Typography variant="h5" pb={4}>Dream, Plan, Build</Typography>
+                    <Typography>Sounds straight forward right? You Dream it up, we help you plan, and then we build it together. <br/>
+                       Our team of expert designers, product owners and developers will team up with you to help build out the application / technology that you want. Whether you need to modernize your existing products or innovate new technologies, we are here for you.
+                    </Typography>
+                    <Button>Lets get started</Button>
+
+
+                </div>
+
+                    <br/>
+                    <br/>
+                    <br/>
+
+                <div style={{maxWidth: 700}}>
+                    <Typography variant="h5" pb={4}>CI/CD - (Continuous Innovation - Continuois Development)</Typography>
+                    <Typography>
+                        Looking for full and lasting support? Awesome! We love building lasting relationships that will serve you best. With this service we dedicate a resources to bolster your products, with continued support and managed services.
+                    </Typography>
+                    <Button>Lets get started</Button>
+                </div>
 
             </section>
             {/* section end */}
@@ -79,4 +109,4 @@ const About: NextPage = () => {
     )
 }
 
-export default About;
+export default Services;

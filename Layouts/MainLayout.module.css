@@ -3,8 +3,9 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   color: white;
-  z-index: 2;
+  z-index: 1;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 18px;
@@ -17,4 +18,25 @@
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
 }
