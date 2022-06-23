@@ -4,16 +4,21 @@ import styles from '../styles/Home.module.css'
 
 import Particles from "react-tsparticles";
 
+interface ParticleComponentProps {
+  height?: string,
+}
 
 
-const ParticleComponent: NextComponentType = () => {
+const ParticleComponent = (props: ParticleComponentProps) => {
+
+  const { height } = props;
 
 // #0d47a1
   return (
         <Particles
           id="tsparticles"
-          className={styles.tsparticles}
-          height="100vh"
+          // className={styles.tsparticles}
+          height={height || '100vh'}
           width="100%"
 
           options={{
@@ -73,7 +78,7 @@ const ParticleComponent: NextComponentType = () => {
                 enable: true,
                 outMode: "bounce",
                 random: false,
-                speed: 6,
+                speed: 1,
                 straight: false,
               },
               number: {

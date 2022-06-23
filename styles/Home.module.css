@@ -27,28 +27,6 @@
   margin-left: 0.5rem;
 }
 
-/*  NEW  */
-.nav {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  color: white;
-  z-index: 2;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: 18px;
-}
-
-.navItem {
-  padding: 8px;
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-}
-
 .headerTextContainer {
   display: flex;
   height: 100%;
@@ -80,6 +58,7 @@
   position: absolute;
   top: 0;
   width: 100vw;
+  z-index: 0;
 }
 
 .splash {
