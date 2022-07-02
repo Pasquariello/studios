@@ -66,7 +66,7 @@ export default function ResponsiveDrawer(props: Props) {
 
   return (
     <nav className={styles.navbar}>
-    <div className={styles.brand_title}>ARDEN studios</div>
+    <div className={styles.brand_title}><b>ARDEN</b> studios</div>
     {/* <a href="#" className={styles.toggle_button}>
       <span className={styles.bar}></span>
       <span className={styles.bar}></span>

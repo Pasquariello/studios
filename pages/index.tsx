@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link';
 import styles from '../styles/Home.module.css'
 
-import { Box, Button, Grid, Stack, Typography } from '@mui/material';
+import { Box, Button, Divider, Grid, Stack, Typography } from '@mui/material';
 import ParticleComponent from '../components/ParticleComponent';
   
 import WebAssetIcon from '@mui/icons-material/WebAsset';
@@ -39,8 +39,8 @@ const Home: NextPage = () => {
       <header className={styles.header}>
         <div className={styles.headerTextContainer} >
             <div>
-            <Typography variant="h1" color="#F4F4F9"><b>ARDEN</b> STUDIOS</Typography>    
-            <Typography variant="overline" color="#F4F4F9">Software Development Reimagined</Typography>    
+            <Typography variant="h1" color="#F4F4F9"><b>ARDEN</b> <span style={{fontWeight: 'light'}}>STUDIOS</span></Typography>    
+            <Typography variant="overline" color="#F4F4F9">Software Development <span style={{color: '#FBB13C'}}>Reimagined</span></Typography>    
 
             {/* <Typography variant="h2">Software Development <br/> Reimagined</Typography>     */}
             {/* <Typography variant="overline" color="white">Dream, Build, Deliver</Typography> */}
@@ -58,11 +58,11 @@ const Home: NextPage = () => {
 
 
           <Box py={20} sx={{textAlign: 'center', justifyContent: 'center', display: 'flex', backgroundColor: "#F4F4F9"}}>
-            <Box sx={{maxWidth: 700}}>
-              <Typography variant="h3" sx={{mb: 2}}>Modern Agile Development</Typography> 
-                    
+            <Box sx={{maxWidth: 650}}>
+              <Typography variant="h3" sx={{mb: 2, color: '#FBB13C', fontWeight: 'bold'}}>Modern Agile Development</Typography> 
+              
               <Typography color="#757780" sx={{ fontWeight: 'light' }}>
-                Utilizing an agile approach to deliver contempory software. We understand that software is relient on continous releases and subject to constant change. By focusing on incremental, consumable deliverables we can guarantee that your software will be modern agile and adaptable.
+                By leveraging our agile approach you can deliver the best contemporary software to your clients. We understand that software is relient on continous releases and subject to constant change. By focusing on incremental, consumable deliverables we can guarantee that your software will be modern agile and adaptable.
               </Typography>
             </Box>
           </Box>
@@ -115,7 +115,20 @@ const Home: NextPage = () => {
                   We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs.
                 </Typography>
 
-                <Button sx={{mt: 3, color:"#FBB13C", borderColor: "#FBB13C"}} variant="outlined">Contact Us Now</Button>
+                <Button 
+                  sx={{
+                    mt: 3, 
+                    color:"#FBB13C", 
+                    borderColor: "#FBB13C", 
+                    ':hover': {
+                      color: '#F4F4F9',
+                      borderColor: "#F4F4F9"
+                    }
+                  }} 
+                  variant="outlined"
+                >
+                  Contact Us Now
+                </Button>
             </Box>
          </Grid>    
        </Grid>
