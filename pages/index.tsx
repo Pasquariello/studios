@@ -57,7 +57,7 @@ const Home: NextPage = () => {
       >
 
 
-          <Box py={20} sx={{textAlign: 'center', justifyContent: 'center', display: 'flex', backgroundColor: "#F4F4F9"}}>
+          <Box py={20} px={4} sx={{textAlign: 'center', justifyContent: 'center', display: 'flex', backgroundColor: "#F4F4F9"}}>
             <Box sx={{maxWidth: 650}}>
               <Typography variant="h3" sx={{mb: 2, color: '#FBB13C', fontWeight: 'bold'}}>Modern Agile Development</Typography> 
               
@@ -72,16 +72,22 @@ const Home: NextPage = () => {
           <Grid
             container
             spacing={2}
-            p={16}
+            py={16}
+            px={
+              {
+                xs: 4,
+                md: 16
+              }
+            }
             sx={{
               margin: 0,
-           
+              width: '100%',
               backgroundColor: "#11151C",
             
 
             }}
           >
-          <Grid item sm={12} md={6}>
+          <Grid item xs={12} sm={12} md={6} sx={{display: 'flex', justifyContent: 'flex-start'}}>
              
             <Box sx={{borderLeft: '1px solid #F4F4F9'}} px={2}>
               <Box my={8}>
@@ -101,6 +107,7 @@ const Home: NextPage = () => {
 
          <Grid 
            item
+           xs={12}
            sm={12} 
            md={6}  
            minHeight={250}
@@ -108,7 +115,7 @@ const Home: NextPage = () => {
            sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}
          >
            
-            <Box sx={{maxWidth: 700}}>
+            <Box>
                 <Typography color="#F4F4F9" variant="h3" sx={{mb: 2, fontWeight: 'bold'}}>UNTAPPED POTENTIAL</Typography> 
                       
                 <Typography color="#F4F4F9" sx={{ fontWeight: 'light' }}>
@@ -133,89 +140,6 @@ const Home: NextPage = () => {
          </Grid>    
        </Grid>
           {/* END */}
-
-          {/* <Box p={20} sx={{display: 'flex',  backgroundColor: "#11151C",}}>
-            <Box 
-            >
-              <Box m={8}>
-              <Typography sx={{fontSize: '2.2em', fontWeight: 100 }} color="#FBB13C">WEB</Typography>
-              
-              </Box>
-        
-              <Box m={8}>
-              <Typography sx={{fontSize: '2.2em', fontWeight: 'light' }} color="#FBB13C">MOBILE</Typography>
-              </Box>
-        
-              <Box m={8}>
-              <Typography sx={{fontSize: '2.2em', fontWeight: 'light' }} color="#FBB13C">CLOUD</Typography>
-              </Box>
-            </Box>
-            <Box>
-
-              <Box sx={{maxWidth: 400}}>
-                <Typography color="#F4F4F9" variant="h3" sx={{mb: 2}}>Realize Untapped Potential</Typography> 
-                      
-                <Typography color="#F4F4F9">
-                  We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs.
-                </Typography>
-              </Box>
-
-            </Box>
-          </Box> */}
-
-
-     
-
-
-
-         {/* <Stack
-          direction="row" 
-          spacing={3} 
-          sx={{
-            width: '80%',
-            justifyContent: 'space-around',
-            color: '#22333B',
-            my: 8,
-          }}
-        >
-          <Box sx={{textAlign: 'center'}}>
-              <WebAssetIcon sx={{fontSize: 72}}/>
-              <Typography>Web</Typography>
-          </Box>
-          <Box sx={{textAlign: 'center'}}>
-            <MobileScreenShareIcon sx={{fontSize: 72 }}/>
-            <Typography>Mobile</Typography>
-          </Box>
-          <Box sx={{textAlign: 'center'}}>
-            <CloudQueueIcon sx={{fontSize: 72 }}/>
-            <Typography>Cloud</Typography>
-          </Box>
-
-        </Stack> */}
-
-
-
-        {/* <Box
-          sx={{
-            width: '100%',
-            justifyContent: 'space-around',
-            color: '#757780',
-            backgroundColor: "#11151C",
-            py: 8,
-          }}
-        >
-  
-          <Box py={20} sx={{textAlign: 'center', justifyContent: 'center', display: 'flex'}}>
-            <Box sx={{maxWidth: 700}}>
-              <Typography color="#F4F4F9" variant="h3" sx={{mb: 2}}>Realize Untapped Potential</Typography> 
-                    
-              <Typography color="#F4F4F9">
-                We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs.
-              </Typography>
-            </Box>
-          </Box>
-
-        </Box> */}
 
       </main>
 

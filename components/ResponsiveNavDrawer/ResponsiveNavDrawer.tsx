@@ -42,7 +42,7 @@ export default function ResponsiveDrawer(props: Props) {
   const drawer = (
     <div>
       <Toolbar />
-      <Typography px={2}>Tecnicl</Typography>
+      <Typography px={2}>ARDEN studios</Typography>
       <Divider />
       <List>
         {['Connect', 'Services'].map((text, index) => (

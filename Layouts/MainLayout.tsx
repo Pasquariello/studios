@@ -29,20 +29,7 @@ const MainLayout = (props: LayoutProps) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <ResponsiveDrawer/>
-            {/* <nav className={styles.nav}>
-                <Link href="/">
-                    <a><h3><em>Tecnicl</em></h3></a>
-                </Link>
-                
-                <div style={{display: 'flex'}}>
-                <p className={styles.navItem}>Connect</p>
-    
-                <Link href="/services">
-                <a className={styles.navItem}>Services</a>
-                </Link>
-                </div>
-            </nav> */}
-
+         
             <main>
                 {children}
             </main>

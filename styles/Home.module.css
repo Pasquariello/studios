@@ -63,8 +63,8 @@
   }
 }
 
-@media (max-width: 390px) {
+@media (min-width: 390px) {
   .headerTextContainer h1 {
-    font-size: 3.2em;
+    font-size: 2.5em;
   }
 }
