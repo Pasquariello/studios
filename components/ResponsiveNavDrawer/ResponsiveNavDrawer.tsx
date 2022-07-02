@@ -64,37 +64,51 @@ export default function ResponsiveDrawer(props: Props) {
     setIsOpen(!isOpen);
   }
 
+  const active = isOpen ? 'flex' : 'none';
+
+  const renderMeduLinks = () => {
+    return (
+      <ul>
+        <Link href="/">
+          <li><a>Services</a></li>
+        </Link>
+
+        <Link href="/">
+          <li><a>About</a></li>
+        </Link>
+
+        <Link href="/">
+          <li><a>Contact</a></li>
+        </Link>
+      </ul>
+    )
+  }
+
   return (
     <nav className={styles.navbar}>
-    <div className={styles.brand_title}><b>ARDEN</b> studios</div>
-    {/* <a href="#" className={styles.toggle_button}>
-      <span className={styles.bar}></span>
-      <span className={styles.bar}></span>
-      <span className={styles.ba}></span>
-    </a> */}
+    <Link href="/">
+    <a className={styles.brand_title}><b>ARDEN</b> studios</a>
+    </Link>
     <div id={styles.nav_icon} className={isOpen ? styles.open : ''} style={{height: '100%'}} onClick={toggleNavIcon}>
       <span></span>
       <span></span>
       <span></span>
       <span></span>
     </div>
-    <div className={styles.navbar_links}>
+    <div className={`${styles.navbar_links} ${isOpen ? styles.active : ''}`}>
       <ul>
+        <li>
+          <Link href="/services">
+            <a>Services</a>
+          </Link>
+        </li>
+        <Link href="/">
+          <li><a>About</a></li>
+        </Link>
 
-      <Link href="/">
-         <li><a>Services</a></li>
-      </Link>
-
-      <Link href="/">
-         <li><a>About</a></li>
-      </Link>
-
-      <Link href="/">
-         <li><a>Contact</a></li>
-      </Link>
-        {/* <li><a href="#">Service</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li> */}
+        <Link href="/">
+          <li><a>Contact</a></li>
+        </Link>
       </ul>
     </div>
   </nav>
