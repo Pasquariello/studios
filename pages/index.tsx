@@ -59,10 +59,11 @@ const Home: NextPage = () => {
 
           <Box py={20} px={4} sx={{textAlign: 'center', justifyContent: 'center', display: 'flex', backgroundColor: "#F4F4F9"}}>
             <Box sx={{maxWidth: 650}}>
-              <Typography variant="h3" sx={{mb: 2, color: '#FBB13C', fontWeight: 'bold'}}>Modern Agile Development</Typography> 
+              <Typography className={styles.sectionHeader} variant="h3" sx={{mb: 2, color: '#FBB13C', fontWeight: 'bold'}}>Modern Agile Development</Typography> 
               
               <Typography color="#757780" sx={{ fontWeight: 'light' }}>
-                By leveraging our agile approach you can deliver the best contemporary software to your clients. We understand that software is relient on continous releases and subject to constant change. By focusing on incremental, consumable deliverables we can guarantee that your software will be modern agile and adaptable.
+                Arden Studios uses an agile approach of incremental, consumable deliverables to ensure that your software will be modern, meaningful, and continuously adaptable in a world of constant change.
+                {/* By leveraging our agile approach you can deliver the best contemporary software to your clients. We understand that software is relient on continous releases and subject to constant change. By focusing on incremental, consumable deliverables we can guarantee that your software will be modern agile and adaptable. */}
               </Typography>
             </Box>
           </Box>
@@ -91,16 +92,16 @@ const Home: NextPage = () => {
              
             <Box sx={{borderLeft: '1px solid #F4F4F9'}} px={2}>
               <Box my={8}>
-              <Typography sx={{fontSize: '1.75em' }} color="#FBB13C">WEB</Typography>
+              <Typography sx={{fontSize: {xs: '1em', sm: '1.75em'} }} color="#FBB13C">WEB</Typography>
               
               </Box>
         
               <Box my={8}>
-              <Typography sx={{fontSize: '1.75em' }} color="#FBB13C">MOBILE</Typography>
+              <Typography sx={{fontSize: {xs: '1em', sm: '1.75em'} }}  color="#FBB13C">MOBILE</Typography>
               </Box>
         
               <Box my={8}>
-              <Typography sx={{fontSize: '1.75em' }} color="#FBB13C">CLOUD</Typography>
+              <Typography sx={{fontSize: {xs: '1em', sm: '1.75em'} }} color="#FBB13C">CLOUD</Typography>
               </Box>
             </Box>
          </Grid>
@@ -116,10 +117,11 @@ const Home: NextPage = () => {
          >
            
             <Box>
-                <Typography color="#F4F4F9" variant="h3" sx={{mb: 2, fontWeight: 'bold'}}>UNTAPPED POTENTIAL</Typography> 
+                <Typography className={styles.sectionHeader} color="#F4F4F9" variant="h3" sx={{mb: 2, fontWeight: 'bold' }}>UNTAPPED POTENTIAL</Typography> 
                       
                 <Typography color="#F4F4F9" sx={{ fontWeight: 'light' }}>
-                  We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs.
+                  Let us help you build lasting technology that goes above and beyond in satisfying your needs. Our solutions utilize the latest web, mobile, and cloud technologies to optimize performance and open new doors of possibilities.
+                  {/* We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs. */}
                 </Typography>
 
                 <Button 
