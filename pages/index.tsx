@@ -37,13 +37,14 @@ const Home: NextPage = () => {
     <MainLayout title="Tecnical">
      
       <header className={styles.header}>
-        <div 
-          className={styles.headerTextContainer}  
-          style={{
+        <div className={styles.headerTextContainer} >
+            <div>
+            <Typography variant="h1" color="#F4F4F9"><b>ARDEN</b> STUDIOS</Typography>    
+            <Typography variant="overline" color="#F4F4F9">Software Development Reimagined</Typography>    
 
-        }}>
-           
-            <Typography variant="h2">Software Development <br/> Reimagined</Typography>     
+            {/* <Typography variant="h2">Software Development <br/> Reimagined</Typography>     */}
+            {/* <Typography variant="overline" color="white">Dream, Build, Deliver</Typography> */}
+            </div> 
         </div>
 
         <div className={styles.tsparticles}>
@@ -51,9 +52,110 @@ const Home: NextPage = () => {
         </div>
       </header>
 
-      <main className={styles.main}>
+      <main 
+      // className={styles.main}
+      >
 
-        <Stack
+
+          <Box py={20} sx={{textAlign: 'center', justifyContent: 'center', display: 'flex', backgroundColor: "#F4F4F9"}}>
+            <Box sx={{maxWidth: 700}}>
+              <Typography variant="h3" sx={{mb: 2}}>Modern Agile Development</Typography> 
+                    
+              <Typography color="#757780" sx={{ fontWeight: 'light' }}>
+                Utilizing an agile approach to deliver contempory software. We understand that software is relient on continous releases and subject to constant change. By focusing on incremental, consumable deliverables we can guarantee that your software will be modern agile and adaptable.
+              </Typography>
+            </Box>
+          </Box>
+
+
+
+          <Grid
+            container
+            spacing={2}
+            p={16}
+            sx={{
+              margin: 0,
+           
+              backgroundColor: "#11151C",
+            
+
+            }}
+          >
+          <Grid item sm={12} md={6}>
+             
+            <Box sx={{borderLeft: '1px solid #F4F4F9'}} px={2}>
+              <Box my={8}>
+              <Typography sx={{fontSize: '1.75em' }} color="#FBB13C">WEB</Typography>
+              
+              </Box>
+        
+              <Box my={8}>
+              <Typography sx={{fontSize: '1.75em' }} color="#FBB13C">MOBILE</Typography>
+              </Box>
+        
+              <Box my={8}>
+              <Typography sx={{fontSize: '1.75em' }} color="#FBB13C">CLOUD</Typography>
+              </Box>
+            </Box>
+         </Grid>
+
+         <Grid 
+           item
+           sm={12} 
+           md={6}  
+           minHeight={250}
+           flex={1}
+           sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}
+         >
+           
+            <Box sx={{maxWidth: 700}}>
+                <Typography color="#F4F4F9" variant="h3" sx={{mb: 2, fontWeight: 'bold'}}>UNTAPPED POTENTIAL</Typography> 
+                      
+                <Typography color="#F4F4F9" sx={{ fontWeight: 'light' }}>
+                  We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs.
+                </Typography>
+
+                <Button sx={{mt: 3, color:"#FBB13C", borderColor: "#FBB13C"}} variant="outlined">Contact Us Now</Button>
+            </Box>
+         </Grid>    
+       </Grid>
+          {/* END */}
+
+          {/* <Box p={20} sx={{display: 'flex',  backgroundColor: "#11151C",}}>
+            <Box 
+            >
+              <Box m={8}>
+              <Typography sx={{fontSize: '2.2em', fontWeight: 100 }} color="#FBB13C">WEB</Typography>
+              
+              </Box>
+        
+              <Box m={8}>
+              <Typography sx={{fontSize: '2.2em', fontWeight: 'light' }} color="#FBB13C">MOBILE</Typography>
+              </Box>
+        
+              <Box m={8}>
+              <Typography sx={{fontSize: '2.2em', fontWeight: 'light' }} color="#FBB13C">CLOUD</Typography>
+              </Box>
+            </Box>
+            <Box>
+
+              <Box sx={{maxWidth: 400}}>
+                <Typography color="#F4F4F9" variant="h3" sx={{mb: 2}}>Realize Untapped Potential</Typography> 
+                      
+                <Typography color="#F4F4F9">
+                  We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs.
+                </Typography>
+              </Box>
+
+            </Box>
+          </Box> */}
+
+
+     
+
+
+
+         {/* <Stack
           direction="row" 
           spacing={3} 
           sx={{
@@ -76,164 +178,31 @@ const Home: NextPage = () => {
             <Typography>Cloud</Typography>
           </Box>
 
-        </Stack>
+        </Stack> */}
 
 
 
-        {/* Start */}
-        <Box 
+        {/* <Box
           sx={{
-              background: 'linear-gradient(to right, #F24236, #0197F6)',
-              padding: '0.5em',
-              position: 'relative',
-              mx: '4em'
+            width: '100%',
+            justifyContent: 'space-around',
+            color: '#757780',
+            backgroundColor: "#11151C",
+            py: 8,
           }}
         >
-          <Grid
-            container
-            sx={{
-              display: 'flex',  
-              position: 'relative', 
-              objectFit: 'contain', 
-              background:  'white', 
-              p: {
-                xs: 5,
-                sm: 10,
-              },
-              borderRadius: 0,
-              color: "#22333B",
-              width:"100%",
-              height: '100%'
-            }}
-          >
-
-            <Grid item xs={12} sm={6}>
-              <Box mb={8}>
-                <Typography variant="h4" sx={{mb: 2}}>Evolution</Typography> 
-                
-                <Typography>
-                  Software development is ever evolving, let us be the guiding force that helps you adapt and stay ahead of the curve.
-                </Typography>
-              </Box>
-
-              <Box>
-                <Typography variant="h4" sx={{mb: 2}}>Innovation</Typography> 
-                <Typography>
-                  We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs.
-                </Typography>
-              </Box>
-            </Grid>
-
-            <Grid 
-              item
-              xs={12} 
-              sm={6}              
-              sx={{
-                position: 'relative', 
-                objectFit: 'contain',
-              }}
-            >
-      
-              <Image
-                alt=""
-                src="/static/images/undraw_launching_re_tomg.svg"
-                layout="fill"
-              />
-        
-            </Grid>    
-          </Grid>
-        </Box>
-        {/* End */}
-
-
-        {/* Start */}
-
-        <Grid
-          container
-          my={{
-            xs: 4,
-            sm: 8,
-            md: 16,
-          }} 
-          px={2}
-          sx={{
-            display:"flex",
-            justifyContent:"center",
-            alignItems:'center',
-            width:"100%",
-            // border: '1px solid red'
-          }}
-        >
-        <Grid item
-          xs={12} sm={6} 
-          height="400px"
-          sx={{
-            position: 'relative',
-            objectFit: 'contain',
-            // border: '1px solid red',
-          }}
-        >
-          <Image
-            alt=""
-            src="/static/images/undraw_web_devices_re_m8sc.svg"
-            layout="fill"
-          />
-        </Grid>
-
-   
-        <Grid 
-          item  
-          xs={12}  sm={6}
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            // border: '1px solid red'
-          }}
-        >
-          <Box
-            sx={{
-              background: 'linear-gradient(0deg, rgba(10,9,8,1) 11%, rgba(34,51,59,1) 100%)', //'linear-gradient(white, 1%, #22333B, 70%, #0A0908)',
-              height: {
-                xs: '250px',
-                sm: '300px',
-              },
-              width: {
-                xs: '250px',
-                sm: '300px'
-              },
-              borderRadius: '50%',
-              display: 'flex',
-              // p:20,
-              justifyContent: 'center',
-              alignItems: 'center',
-              color: '#F2F4F3',
-              flexDirection: 'column',
-            }}
-          >
-            <Box sx={{width: '50%'}}>
-            <Typography variant="h5">
-              <ReactTextTransition
-                text={texts[textIndex % texts.length]}
-                springConfig={presets.gentle}
-                // style={{ with: "100%", background: 'red' }}
-                // inline
-              />
-            </Typography>
-            <Typography variant="h5">
-              Optimized
-            </Typography>
-            <Typography variant="h5">
-              Solutions
-            </Typography>
+  
+          <Box py={20} sx={{textAlign: 'center', justifyContent: 'center', display: 'flex'}}>
+            <Box sx={{maxWidth: 700}}>
+              <Typography color="#F4F4F9" variant="h3" sx={{mb: 2}}>Realize Untapped Potential</Typography> 
+                    
+              <Typography color="#F4F4F9">
+                We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs.
+              </Typography>
             </Box>
-            <Button>Connect With Us</Button>
           </Box>
-        </Grid>
 
-      
-      </Grid> 
-        {/* End */}
+        </Box> */}
 
       </main>
 

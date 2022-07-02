@@ -24,7 +24,7 @@ const ParticleComponent = (props: ParticleComponentProps) => {
           options={{
             background: {
               color: {
-                value: "#0197F6",
+                value: "#11151C", //"#1E1E24", //"#2A2B2E", //"#0197F6",
               },
             },
             fullScreen: {
@@ -34,7 +34,7 @@ const ParticleComponent = (props: ParticleComponentProps) => {
             interactivity: {
               events: {
                 onClick: {
-                  enable: true,
+                  enable: false,
                   mode: "push",
                 },
                 onHover: {

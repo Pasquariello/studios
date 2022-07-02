@@ -29,7 +29,6 @@ const MainLayout = (props: LayoutProps) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <ResponsiveDrawer/>
-      
             {/* <nav className={styles.nav}>
                 <Link href="/">
                     <a><h3><em>Tecnicl</em></h3></a>
