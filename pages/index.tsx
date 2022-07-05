@@ -40,7 +40,7 @@ const Home: NextPage = () => {
         <div className={styles.headerTextContainer} >
             <div>
             <Typography variant="h1" color="#F4F4F9"><b>CASCADIAN</b></Typography>    
-            <Typography variant="overline" color="#F4F4F9">Software Development <span style={{color: '#FBB13C'}}>Reimagined</span></Typography>    
+            <Typography variant="overline" color="#F4F4F9">Custom Software Development <span style={{color: '#FBB13C'}}>Reimagined</span></Typography>    
 
             {/* <Typography variant="h2">Software Development <br/> Reimagined</Typography>     */}
             {/* <Typography variant="overline" color="white">Dream, Build, Deliver</Typography> */}
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
               <Typography className={styles.sectionHeader} variant="h3" sx={{mb: 2, color: '#FBB13C', fontWeight: 'bold'}}>Modern Agile Development</Typography> 
               
               <Typography color="#757780" sx={{ fontWeight: 'light' }}>
-              CASCADIAN uses an agile approach of incremental, consumable deliverables to ensure that your software will be modern, meaningful, and continuously adaptable in a world of constant change.
+                Cascadian uses an agile approach of incremental, consumable deliverables to ensure that your software will be modern, meaningful, and continuously adaptable in a world of constant change.
                 {/* By leveraging our agile approach you can deliver the best contemporary software to your clients. We understand that software is relient on continous releases and subject to constant change. By focusing on incremental, consumable deliverables we can guarantee that your software will be modern agile and adaptable. */}
               </Typography>
             </Box>

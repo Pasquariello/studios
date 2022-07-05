@@ -41,7 +41,7 @@ const Home: NextPage = () => {
       
       <header className={styles.heroContainer}>
         <nav className={styles.nav}>
-          <h3><em>Tecnicl</em></h3>
+          <h3><em>Cascadian</em></h3>
           <div style={{display: 'flex'}}>
           <p className={styles.navItem}>Connect</p>
 

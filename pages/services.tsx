@@ -24,12 +24,12 @@ const Services: NextPage = () => {
                             mb={4}
                             variant="h2"
                         >
-                            Let Us Bring Your Technology Needs To Life
+                            Bringing Your Technology Needs To Life
                         </Typography>
                     
 
                         <Typography>
-                            By utilizing the latest and most established technology tecnical can super charge your company to reach your fullest potential
+                            By utilizing the latest and most established technology Cascadian can super charge your company to reach its fullest potential
                         </Typography>
                     </div>
                 </div>
