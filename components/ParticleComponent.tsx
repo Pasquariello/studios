@@ -18,7 +18,7 @@ const ParticleComponent = (props: ParticleComponentProps) => {
         <Particles
           id="tsparticles"
           // className={styles.tsparticles}
-          height={height || '100vh'}
+          height={height || '100%'}
           width="100%"
 
           options={{

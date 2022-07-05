@@ -34,7 +34,7 @@ const Home: NextPage = () => {
   }, [textIndex]);
 
   return (
-    <MainLayout title="Tecnical">
+    <MainLayout title="Home">
      
       <header className={styles.header}>
         <div className={styles.headerTextContainer} >
