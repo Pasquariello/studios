@@ -40,7 +40,7 @@ export default function ResponsiveDrawer(props: Props) {
   const drawer = (
     <div>
       <Toolbar />
-      <Typography px={2}>ARDEN studios</Typography>
+      <Typography px={2}>CASCADIAN</Typography>
       <Divider />
       <List>
         {['Connect', 'Services'].map((text, index) => (
@@ -79,7 +79,7 @@ export default function ResponsiveDrawer(props: Props) {
                 
                 
                 <Link href="/">
-                    <a><h3><em>ARDEN studios</em></h3></a>
+                    <a><h3><em>CASCADIAN</em></h3></a>
                 </Link>
                 
                 <div style={{display: 'flex'}}>

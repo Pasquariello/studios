@@ -42,7 +42,7 @@ export default function ResponsiveDrawer(props: Props) {
   const drawer = (
     <div>
       <Toolbar />
-      <Typography px={2}>ARDEN studios</Typography>
+      <Typography px={2}>CASCADIAN</Typography>
       <Divider />
       <List>
         {['Connect', 'Services'].map((text, index) => (
@@ -87,7 +87,7 @@ export default function ResponsiveDrawer(props: Props) {
   return (
     <nav className={styles.navbar}>
     <Link href="/">
-    <a className={styles.brand_title}><b>ARDEN</b> studios</a>
+    <a className={styles.brand_title}><b>CASCADIAN</b></a>
     </Link>
     <div id={styles.nav_icon} className={isOpen ? styles.open : ''} style={{height: '100%'}} onClick={toggleNavIcon}>
       <span></span>
