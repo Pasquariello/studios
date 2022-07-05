@@ -53,9 +53,7 @@ const Services: NextPage = () => {
 
                     </ul>
 
-                    <Stack direction="row" spacing={2}>
-
-                   
+                    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
                     <Card sx={{  maxWidth: 345  }}>
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
