@@ -13,9 +13,9 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #11151c;
+  background: #11151c;
   color: white;
-  mix-blend-mode: difference;
+  mix-blend-mode: exclusion;
   z-index: 2;
 }
 
@@ -46,7 +46,7 @@ body {
 }
 
 .navbar_links li:hover {
-  /* background-color: #555; */
+  background-color: #555;
 }
 
 #nav_icon {

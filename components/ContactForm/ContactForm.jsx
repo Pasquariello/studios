@@ -1,23 +1,26 @@
 import { useForm, ValidationError } from '@formspree/react';
+import { Button, TextField } from '@mui/material';
+
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("xqknoqoa");
  
   if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
+      return <p>Looking forward to working with you!</p>;
   }
 
   return (
       <form onSubmit={handleSubmit}>
         <div>
-      <label htmlFor="email">
-        Email Address
-      </label>
-      <input
-        id="email"
-        type="email" 
-        name="email"
-      />
+            <TextField
+         
+            label="Email Address"
+            id="email"
+            type="email" 
+            name="email"
+            fullWidth
+          />
+    
       <ValidationError 
         prefix="Email" 
         field="email"
@@ -25,10 +28,17 @@ const ContactForm = () => {
       />
       </div>
       <div>
-      <textarea
-        id="message"
-        name="message"
-      />
+
+      <TextField
+            label="Message Body"
+            id="message"
+            name="message"
+            multiline
+            rows={6}
+            fullWidth
+            margin="dense"
+
+          />
       <ValidationError 
         prefix="Message" 
         field="message"
@@ -36,9 +46,23 @@ const ContactForm = () => {
       />
       </div>
       <div>
-      <button type="submit" disabled={state.submitting}>
-        Submit
-      </button>
+      <Button 
+        type="submit" 
+        disabled={state.submitting}
+        sx={{
+        mt: 3, 
+        color:"#FBB13C", 
+        borderColor: "#FBB13C", 
+        ':hover': {
+            color: '#11151C',
+            borderColor: "#11151C",
+            background: "white"
+        }
+        }} 
+        variant="outlined"
+    >
+        Contact Us Now
+    </Button>
       </div>
     </form>
   );

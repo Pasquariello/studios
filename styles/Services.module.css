@@ -58,12 +58,9 @@
   position: absolute;
   top: 0;
   width: 100vw;
-  z-index: 0;
+  z-index: -1;
   overflow: hidden;
-  top: 0;
-  left: 0;
-  background-color: red;
-  max-height: 100%;
+  height: 100%;
 }
 /* end new */
 .headerImageWrapper {
@@ -75,6 +72,10 @@
 
 .mainTagLineContainer {
   width: 100%;
+}
+
+.serviceListItem {
+  margin: 12px 0;
 }
 
 @media (min-width: 390px) {
