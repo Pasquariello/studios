@@ -2,7 +2,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import { Button, TextField } from '@mui/material';
 
 
-const ContactForm = () => {
+const ContactForm = ({ctaText}) => {
   const [state, handleSubmit] = useForm("xqknoqoa");
  
   if (state.succeeded) {
@@ -13,12 +13,11 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit}>
         <div>
             <TextField
-         
-            label="Email Address"
-            id="email"
-            type="email" 
-            name="email"
-            fullWidth
+              label="Email Address"
+              id="email"
+              type="email" 
+              name="email"
+              fullWidth
           />
     
       <ValidationError 
@@ -61,7 +60,7 @@ const ContactForm = () => {
         }} 
         variant="outlined"
     >
-        Contact Us Now
+        {ctaText || "Connect With Us"}
     </Button>
       </div>
     </form>

@@ -4,7 +4,6 @@ import { styled } from '@mui/material/styles';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import MainLayout from '../Layouts/MainLayout';
-import Image from 'next/image';
 import styles from '../styles/Services.module.css';
 import ParticleComponent from '../components/ParticleComponent';
 
@@ -110,6 +109,7 @@ const Services = () => {
                             <li className={styles.serviceListItem}><Typography color="#757780" sx={{ fontWeight: 'light' }}>PWA (Progressive Web Apps)</Typography></li>
                         </ul>
                     </div>
+
                     <Divider orientation="vertical" />
 
                     <div>

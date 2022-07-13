@@ -99,7 +99,7 @@ export default function ResponsiveDrawer(props: Props) {
           </Link>
         </li>
 
-        <Link href="/">
+        <Link href="/contact">
           <li><a>Contact</a></li>
         </Link>
       </ul>
