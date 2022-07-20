@@ -14,7 +14,7 @@ const ContactPage = () => {
       >
           <div 
               style={{ padding: "80px 20px", maxWidth: '700px'}}
-          //className={styles.headerTextContainer} 
+              className={styles.headerTextContainer} 
           >
          
 
@@ -33,7 +33,7 @@ const ContactPage = () => {
                       gutterBottom
                       
                   >
-                    Ready to <span style={{color: '#FBB13C'}}>start building,</span> looking to plan your next steps or have any other questions? We are excited to hear from you!  
+                    Ready to <span style={{color: '#FBB13C'}}>start building,</span> looking to plan your next steps, or have any other questions? We are excited to hear from you!  
                   </Typography> 
                
           </div>

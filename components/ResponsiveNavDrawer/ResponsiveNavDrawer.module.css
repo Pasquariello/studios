@@ -15,7 +15,7 @@ body {
   width: 100%;
   background: #11151c;
   color: white;
-  mix-blend-mode: exclusion;
+  /* mix-blend-mode: saturation; */
   z-index: 2;
 }
 
@@ -157,10 +157,11 @@ body {
   }
 
   .navbar_links ul li a {
-    padding: 0.5rem 1rem;
+    padding: 2rem 1rem;
   }
 
   .navbar_links.active {
     display: flex;
+    height: 100vh;
   }
 }

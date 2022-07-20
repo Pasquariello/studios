@@ -33,12 +33,11 @@ const Services = () => {
         <MainLayout title="Services">
             <header
                 style={{
-                    // backgroundColor: "#11151C",
                      display: 'flex', justifyContent: 'center'}}
             >
                 <div 
                     style={{ padding: "80px 20px", maxWidth: '700px'}}
-                //className={styles.headerTextContainer} 
+                    className={styles.headerTextContainer} 
                 >
                
 

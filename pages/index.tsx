@@ -41,9 +41,6 @@ const Home: NextPage = () => {
             <div>
             <Typography variant="h1" color="#F4F4F9"><b>CASCADIAN</b></Typography>    
             <Typography variant="overline" color="#F4F4F9">Custom Software Development <span style={{color: '#FBB13C'}}>Reimagined</span></Typography>    
-
-            {/* <Typography variant="h2">Software Development <br/> Reimagined</Typography>     */}
-            {/* <Typography variant="overline" color="white">Dream, Build, Deliver</Typography> */}
             </div> 
         </div>
 

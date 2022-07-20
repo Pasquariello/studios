@@ -33,7 +33,7 @@
 
 .headerTextContainer h2 {
   color: white;
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 /* new */
 
@@ -42,16 +42,9 @@
   display: inline-block;
 }
 
-.headerTextContainer h2 {
-  color: white;
-  font-size: 1.5em;
-}
-
 .header {
   width: 100%;
-  /* display: flex; */
   justify-content: center;
-  /* height: 100px; */
 }
 
 .tsparticles {
@@ -90,7 +83,7 @@
   }
 
   .headerTextContainer h2 {
-    font-size: 2.2em;
+    font-size: 3.75em;
   }
 
   .mainTagLineContainer {

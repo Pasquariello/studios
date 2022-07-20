@@ -1,18 +1,10 @@
 import { useState } from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
+
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
-import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
@@ -70,11 +62,11 @@ export default function ResponsiveDrawer(props: Props) {
     return (
       <ul>
         <Link href="/">
-          <li><a>Services</a></li>
+          <a><li>Services</li></a>
         </Link>
 
         <Link href="/">
-          <li><a>Contact</a></li>
+          <a><li>Contact</li></a>
         </Link>
       </ul>
     )
@@ -98,10 +90,11 @@ export default function ResponsiveDrawer(props: Props) {
             <a>Services</a>
           </Link>
         </li>
-
-        <Link href="/contact">
-          <li><a>Contact</a></li>
-        </Link>
+        <li>
+          <Link href="/contact">
+            <a>Contact</a>
+          </Link>
+        </li>
       </ul>
     </div>
   </nav>
