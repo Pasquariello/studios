@@ -3,7 +3,7 @@ import { Button, TextField } from '@mui/material';
 
 
 const ContactForm = ({ctaText}) => {
-  const [state, handleSubmit] = useForm("xqknoqoa");
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_EMAIL_KEY);
  
   if (state.succeeded) {
       return <p>Looking forward to working with you!</p>;
