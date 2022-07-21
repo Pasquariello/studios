@@ -38,7 +38,7 @@ const ContactPage = () => {
                   </Typography> 
                
           </div>
-          <ParticleComponent height="fit-content"/>  
+          <ParticleComponent/>  
       </header>
 
           <Box

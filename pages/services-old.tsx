@@ -15,7 +15,7 @@ const Services: NextPage = () => {
             <div style={{ flex: 1 }}>
               
                 <div className={styles.particleContainer}>
-                    <ParticleComponent height='500px'/>
+                    <ParticleComponent/>
                 </div>
 
                 <div className={styles.headerContentWrapper}>
