@@ -56,7 +56,7 @@ const Home: NextPage = () => {
               <Typography className={styles.sectionHeader} variant="h3" sx={{mb: 2, color: '#FBB13C', fontWeight: 'bold'}}>Modern Agile Development</Typography> 
               
               <Typography color="#757780" sx={{ fontWeight: 'light' }}>
-                Cascadian is a botique custom software development agency. We understand the importance of your application development and pride ourselves on delivering the products that you have been dreaming of. Our agile approach of incremental, consumable deliverables ensures that your software will be modern, meaningful, and continuously adaptable in a world of constant change.
+                Cascadian is a boutique custom software development agency. We understand the importance of your application development and pride ourselves on delivering the products that you have been dreaming of. Our agile approach of incremental, consumable deliverables ensures that your software will be modern, meaningful, and continuously adaptable in a world of constant change.
                 {/* By leveraging our agile approach you can deliver the best contemporary software to your clients. We understand that software is relient on continous releases and subject to constant change. By focusing on incremental, consumable deliverables we can guarantee that your software will be modern agile and adaptable. */}
               </Typography>
             </Box>
