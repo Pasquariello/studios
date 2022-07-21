@@ -32,14 +32,15 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative
 }
 
-.tsparticles {
+/* .tsparticles {
   position: absolute;
   top: 0;
   width: 100vw;
   z-index: 0;
-}
+} */
 
 .splash {
   /* position: absolute; */

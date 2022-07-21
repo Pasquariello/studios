@@ -10,11 +10,12 @@ const ContactPage = () => {
       <header
           style={{
               // backgroundColor: "#11151C",
+              position: 'relative',
                display: 'flex', justifyContent: 'center'}}
       >
           <div 
               style={{ padding: "80px 20px", maxWidth: '700px'}}
-              className={styles.headerTextContainer} 
+          //className={styles.headerTextContainer} 
           >
          
 
@@ -37,22 +38,24 @@ const ContactPage = () => {
                   </Typography> 
                
           </div>
-          <div className={styles.tsparticles} style={{overflow: 'hidden'}}>
-          <ParticleComponent height="100vh"/>  
-          </div>
+          <ParticleComponent height="fit-content"/>  
       </header>
 
-      <Box py={10} px={4} sx={{backgroundColor: "#F4F4F9"}}>
           <Box
-            p={{
-                xs: 2,
-                md: 4
+            py={{
+              xs: 8,
+              md:14
+            }}
+            px={{
+                xs: 4,
+                md: 8
             }}
             sx={{
               width: '100%',
               display: 'flex',
-              justifyContent: 'center'
-
+              justifyContent: 'center',
+              // backgroundColor: "#F4F4F9",
+              height: '100%',
             }}
             >
               <Box
@@ -60,7 +63,6 @@ const ContactPage = () => {
               >
                 <ContactForm ctaText="Send" />
               </Box>
-            </Box>
             </Box>
         </MainLayout>
     )

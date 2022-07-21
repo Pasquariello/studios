@@ -43,10 +43,7 @@ const Home: NextPage = () => {
             <Typography variant="overline" color="#F4F4F9">Custom Software Development <span style={{color: '#FBB13C'}}>Reimagined</span></Typography>    
             </div> 
         </div>
-
-        <div className={styles.tsparticles}>
-          <ParticleComponent height="100vh"/>  
-        </div>
+          <ParticleComponent />  
       </header>
 
       <main 

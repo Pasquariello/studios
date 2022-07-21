@@ -6,7 +6,13 @@ const ContactForm = ({ctaText}) => {
   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_EMAIL_KEY);
  
   if (state.succeeded) {
-      return <p>Looking forward to working with you!</p>;
+      return (
+        <div>
+          <p style={{color: '#39DB80'}}><b>Yay!</b></p>
+          <p>Your message was succcessfully delivered</p>
+          <p>We are so excited for the opportunity to work with you and will be in contact with you shortly.</p>
+        </div>
+      )
   }
 
   return (

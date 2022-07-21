@@ -1,26 +1,23 @@
-import type { NextComponentType } from 'next'
-
-import styles from '../styles/Home.module.css'
-
 import Particles from "react-tsparticles";
 
-interface ParticleComponentProps {
-  height?: string,
-}
 
+const ParticleComponent = () => {
 
-const ParticleComponent = (props: ParticleComponentProps) => {
-
-  const { height } = props;
 
 // #0d47a1
   return (
         <Particles
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: -1,
+          }}
           id="tsparticles"
-          // className={styles.tsparticles}
-          height={height || '100%'}
-          width="100%"
-
+          width="100%" 
+         
           options={{
             background: {
               color: {

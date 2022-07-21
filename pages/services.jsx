@@ -33,7 +33,7 @@ const Services = () => {
         <MainLayout title="Services">
             <header
                 style={{
-                     display: 'flex', justifyContent: 'center'}}
+                     display: 'flex', justifyContent: 'center', position: 'relative'}}
             >
                 <div 
                     style={{ padding: "80px 20px", maxWidth: '700px'}}
@@ -60,9 +60,7 @@ const Services = () => {
                         </Typography> 
                      
                 </div>
-                <div className={styles.tsparticles} style={{overflow: 'hidden'}}>
-                <ParticleComponent height="100vh"/>  
-                </div>
+                <ParticleComponent />  
             </header>
 
             <Box py={10} px={4} sx={{backgroundColor: "#F4F4F9"}}>
@@ -134,54 +132,32 @@ const Services = () => {
 
             </Box>
 
-            {/* section start*/}
-                {/* <Box px={5} py={16} className={styles.mainTagLineContainer}>
-                    <div style={{maxWidth: 700}}>
-                    <Typography mb={4} variant="h4">
-                        We Are Obsessed With Your Success
-                    </Typography>
-
-                    <Typography>
-                        We are fully invested in our clients.  Through our engagment we remain agile and adaptable, prioritizing your needs. Building a strong and sustaianable relationship with our clients is at the core of everything we do.
-                    </Typography>
-                    </div>
-
-                </Box>         */}
-            {/* section end */}
-
             <Box py={10} px={4} sx={{display: 'flex', justifyContent: 'center'}}>
-            <Box sx={{maxWidth: 600}}>
-                <Typography className={styles.sectionHeader} variant="h3" sx={{mb: 2, color: '#FBB13C', fontWeight: 'bold'}}>                        
-                    Obsessed With Your Success
-                </Typography> 
-              
-              <Typography color="#757780" sx={{ fontWeight: 'light' }}>
-              We are fully invested in our clients.  Through our engagment we remain agile and adaptable, prioritizing your needs. Building a strong and sustaianable relationship with our clients is at the core of everything we do.
-              </Typography>
+                <Box sx={{maxWidth: 600}}>
+                    <Typography className={styles.sectionHeader} variant="h3" sx={{mb: 2, color: '#FBB13C', fontWeight: 'bold'}}>                        
+                        Obsessed With Your Success
+                    </Typography> 
+                
+                <Typography color="#757780" sx={{ fontWeight: 'light' }}>
+                We are fully invested in our clients.  Through our engagment we remain agile and adaptable, prioritizing your needs. Building a strong and sustaianable relationship with our clients is at the core of everything we do.
+                </Typography>
+                </Box>
             </Box>
-          </Box>
-
             
             <Box
-            p={{
-                xs: 2,
-                md: 4
-            }}
-            sx={{
-              width: '100%',
-              display: 'flex',
-              justifyContent: 'center'
+                p={{
+                    xs: 2,
+                    md: 4
+                }}
+                mb={6}
+                sx={{
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center'
 
-            }}
+                }}
             >
-            
-                <Box 
-                  
-                            sx={{
-                                width: 900,
-                                
-                              }}
-                >
+                <Box sx={{ width: 900 }}>
                     <ContactForm />
                 </Box>
             </Box>
