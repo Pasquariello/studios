@@ -38,9 +38,17 @@ const Home: NextPage = () => {
      
       <header className={styles.header}>
         <div className={styles.headerTextContainer} >
-            <div>
-            <Typography variant="h1" color="#F4F4F9"><b>CASCADIAN</b></Typography>    
-            <Typography variant="overline" color="#F4F4F9">Custom Software Development <span style={{color: '#FBB13C'}}>Reimagined</span></Typography>    
+            <div style={{width: '600px'}}>
+              
+            <Image
+              layout="responsive"
+              src="/static/images/mainLogoWhite.png"
+              alt="Picture of the author"
+              width={600}
+              height={200}
+            />
+            {/* <Typography variant="h1" color="#F4F4F9"><b>CASCADIAN</b></Typography>    
+            <Typography variant="overline" color="#F4F4F9">Custom Software Development <span style={{color: '#FBB13C'}}>Reimagined</span></Typography>     */}
             </div> 
         </div>
           <ParticleComponent />  
