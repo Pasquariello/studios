@@ -11,6 +11,9 @@ import Typography from '@mui/material/Typography';
 import styles from './ResponsiveNavDrawer.module.css'; // TODO - fix imports and move styles - fix layouts directory structure
 import Link from 'next/link';
 
+import Image from 'next/image'
+
+
 
 
 const drawerWidth = 240;
@@ -75,7 +78,21 @@ export default function ResponsiveDrawer(props: Props) {
   return (
     <nav className={styles.navbar}>
     <Link href="/">
-    <a className={styles.brand_title}><b>CASCADIAN</b></a>
+      <a>
+        <div style={{display: 'flex', alignItems: 'center'}}>
+          <div style={{ width: '45px', margin:'0 8px'}}>
+            <Image
+              layout="responsive"
+              src="/static/images/logo.png"
+              alt="site logo"
+              width={45}
+              height={45}
+            />
+          </div>
+          <p><b>CASCADIAN</b></p>
+        </div>
+      </a>
+      {/* <a className={styles.brand_title}></a> */}
     </Link>
     <div id={styles.nav_icon} className={isOpen ? styles.open : ''} style={{height: '100%'}} onClick={toggleNavIcon}>
       <span></span>
