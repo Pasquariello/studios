@@ -43,9 +43,9 @@ const Home: NextPage = () => {
             <Image
               layout="responsive"
               src="/static/images/mainLogoWhite.png"
-              alt="Picture of the author"
+              alt="site logo"
               width={600}
-              height={200}
+              height={140}
             />
             {/* <Typography variant="h1" color="#F4F4F9"><b>CASCADIAN</b></Typography>    
             <Typography variant="overline" color="#F4F4F9">Custom Software Development <span style={{color: '#FBB13C'}}>Reimagined</span></Typography>     */}
