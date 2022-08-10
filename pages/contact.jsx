@@ -2,7 +2,8 @@ import ContactForm from '../components/ContactForm';
 import MainLayout from '../Layouts/MainLayout';
 import styles from '../styles/Services.module.css';
 import ParticleComponent from '../components/ParticleComponent';
-import { Box, Button, Card, CardActions, CardContent, Collapse, Divider, IconButton, Stack, Typography } from '@mui/material';
+import { Box, Button, Card, CardActions, CardContent, Collapse, Divider, IconButton, Link, Stack, Typography } from '@mui/material';
+import Image from 'next/image';
 
 const ContactPage = () => {
     return (
@@ -17,7 +18,6 @@ const ContactPage = () => {
               style={{ padding: "80px 20px", maxWidth: '700px'}}
           //className={styles.headerTextContainer} 
           >
-         
 
                   <Typography 
                       mb={4}
@@ -40,11 +40,10 @@ const ContactPage = () => {
           </div>
           <ParticleComponent/>  
       </header>
-
           <Box
             py={{
               xs: 8,
-              md:14
+              md: 8//14
             }}
             px={{
                 xs: 4,
@@ -57,13 +56,19 @@ const ContactPage = () => {
               // backgroundColor: "#F4F4F9",
               height: '100%',
             }}
-            >
+            >  
               <Box
                 sx={{width: 900}}
               >
                 <ContactForm ctaText="Send" />
+                <Box my={4} sx={{display: 'flex', justifyContent: 'center'}}>
+                  <Link href="https://www.designrush.com/agency/mobile-app-design-development">
+                    <Image src="/static/images/designRush.svg" height={150} width={150} />
+                  </Link> 
+                </Box>
               </Box>
             </Box>
+
         </MainLayout>
     )
 }
