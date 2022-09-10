@@ -8,6 +8,8 @@ import styles from '../styles/Services.module.css';
 import ParticleComponent from '../components/ParticleComponent';
 
 import ContactForm from '../components/ContactForm';
+import { Description } from '@mui/icons-material';
+import Link from 'next/link';
 
 
 const ExpandMore = styled((props) => {
@@ -29,6 +31,39 @@ const Services = () => {
       setExpanded(!expanded);
     };
 
+    const focusAreas = [
+        {
+            title: 'MOBILE',
+            description: 'We use the latest technologies combined with a human-centric approach to build efficient and future proof web applications',
+            borderColor: 'rgb(251, 177, 60)',
+        },
+        {
+            title: 'WEB',
+            description: 'We use the latest technologies combined with a human-centric approach to build efficient and future proof web applications',
+            borderColor: 'rgba(251, 177, 60, .75)',
+        },
+        {
+            title: 'CLOUD',
+            description: 'Let us build your dream cloud architecture from the cloud up, using all the major cloud service providers (Google, AWS, and Azure)',
+            borderColor: 'rgba(251, 177, 60, .55)',
+        },
+    ]
+
+    const services = [
+        'PoC Development',
+        'Front-End Development',
+        'Security Best Practices',
+        'Re-Engineering',
+        'API',
+        'Back-End Development',
+        'Cloud Migration',
+        'System Architecture',
+        'Design',
+        'Progrssive Web Apps (PWA)',
+        'Cross-Platform',
+        'MVP', 
+    ]
+
     return (
         <MainLayout title="Services">
             <header
@@ -46,24 +81,126 @@ const Services = () => {
                             variant="h2"
                             color="#F4F4F9"
                         >
-                            Animating Your Vision
+                            SERVICES
                         </Typography>
                         
 
-                        <Typography
+                        {/* <Typography
                             color="#F4F4F9"
                             variant="body2"
                             gutterBottom
                             
                         >
                             We build <span style={{color: '#FBB13C'}}>custom software</span> to super charge your success, validate your vision and innovate the technology your compnay relies on. 
-                        </Typography> 
+                        </Typography>  */}
                      
                 </div>
                 <ParticleComponent />  
             </header>
 
-            <Box py={10} px={4} sx={{backgroundColor: "#F4F4F9"}}>
+            <Box py={10} px={4} sx={{display: 'flex', justifyContent: 'center'}}>
+                <Box sx={{maxWidth: 800, textAlign: 'center'}}>
+                    <Box mb={8}>
+                        <Typography className={styles.sectionHeader} variant="h3" sx={{mb: 2, color: '#FBB13C'}}>                        
+                            ANIMATING YOUR VISION
+                        </Typography> 
+                        
+                        <Box sx={{display: 'flex', justifyContent: 'center'}}>
+                            <Typography px={2} color="#757780" sx={{ fontWeight: 'light', maxWidth: 600 }}>
+                                We build software to supercharge your success, support your vision, and innovate the technology your company relies on daily.
+                            </Typography>
+                        </Box>
+                    </Box>
+
+                    {
+                        focusAreas.map(focusArea => {
+                            const {title, description, borderColor } = focusArea;
+                            return (
+                                <Box 
+                                    key={title}
+                                    my={4}
+                                    p={4}
+                                    sx={{
+                                        border: `10px solid ${borderColor}`,
+                                        borderRadius: 2,
+                                        textAlign: 'justify',
+                                    }}
+                                >
+                                    <Typography variant="h4" sx={{color: '#11151C'}} gutterBottom>{title}</Typography>
+                                    
+                                    <Typography color="#757780" sx={{ fontWeight: 'light' }}>
+                                        {description}
+                                    </Typography>
+                                </Box> 
+                            )
+                        })
+                    }
+                    {/* Start HERE */}
+                    <Box my={2}>
+                        <Box>
+                            <Typography mt={6} mb={4} className={styles.sectionHeader} variant="h4" sx={{color: '#11151C'}}>                        
+                                ADDITIONAL SERVICES
+                            </Typography> 
+                        </Box>
+
+                        <Box 
+                            sx={{                        
+                                display: 'grid',
+                                gridTemplateColumns: {xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)'},
+                                gridTemplateRows: {xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr'},
+                                gap: 2,
+                                gridAutoRows: '1fr',
+                            }}
+                        >
+                            {
+                                services.map(service => {
+                                    return (
+                                        <Box 
+                                            key={service} 
+                                            px={3} 
+                                            py={2} 
+                                            sx={{ 
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                backgroundColor: '#11151C',
+                                                justifyContent: 'center'
+                                            }}>
+                                            <Typography sx={{color: 'white'}}>{service}</Typography>
+                                        </Box>
+                                    )
+                                })
+                            }
+                        </Box>
+                    </Box>
+                    {/* End HERE */}
+                    <Box my={8}>
+                        <Typography color="#757780" sx={{ fontWeight: 'light' }}>
+                            Have something else in mind? Let&apos;s start a conversation and see how we can prioritize your needs together
+                        </Typography>
+
+                        <Link href="/contact" passHref>
+                            <Button 
+                                sx={{
+                                    mt: 3, 
+                                    color:"#11151c", 
+                                    borderColor: "#11151c", 
+                                    borderWidth: 2,
+                                    ':hover': {
+                                        color: '#11151c',
+                                        borderColor: "#11151c",
+                                        borderWidth: 2,
+                                    }
+                                }} 
+                                variant="outlined"
+                                >
+                                Contact Us Now
+                            </Button>
+                        </Link>
+                    </Box>
+                </Box>
+            </Box>
+
+            {/* <Box py={10} px={4} sx={{backgroundColor: "#F4F4F9"}}>
                     <div style={{textAlign: 'center', marginBottom: 36}}>
                         <Typography variant="h4" >Core Services</Typography>
                     </div>
@@ -71,7 +208,7 @@ const Services = () => {
                     <Stack display="flex" justifyContent="center" mb={'36px'} direction={{ xs: 'column', sm: 'row' }} spacing={2}>
                     <Card sx={{  maxWidth: 375, border: 'none' }}>
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
+                            <Typography gutterBottom component="div">
                                 Web
                             </Typography>
         
@@ -84,7 +221,7 @@ const Services = () => {
 
                     <Card sx={{  maxWidth: 375  }}>
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
+                            <Typography gutterBottom component="div">
                                 Mobile
                             </Typography>
         
@@ -143,8 +280,8 @@ const Services = () => {
                 </Typography>
                 </Box>
             </Box>
-            
-            <Box
+             */}
+            {/* <Box
                 p={{
                     xs: 2,
                     md: 4
@@ -160,7 +297,7 @@ const Services = () => {
                 <Box sx={{ width: 900 }}>
                     <ContactForm />
                 </Box>
-            </Box>
+            </Box> */}
         </MainLayout>
     )
 }

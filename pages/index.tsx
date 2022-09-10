@@ -59,7 +59,9 @@ const Home: NextPage = () => {
       >
 
 
-          <Box py={20} px={4} sx={{textAlign: 'center', justifyContent: 'center', display: 'flex', backgroundColor: "#F4F4F9"}}>
+          <Box py={20} px={4} sx={{textAlign: 'center', justifyContent: 'center', display: 'flex',
+          //  backgroundColor: "#F4F4F9"
+        }}>
             <Box sx={{maxWidth: 650}}>
               <Typography className={styles.sectionHeader} variant="h3" sx={{mb: 2, color: '#FBB13C', fontWeight: 'bold'}}>Modern Agile Development</Typography> 
               
@@ -70,9 +72,130 @@ const Home: NextPage = () => {
             </Box>
           </Box>
 
+          <Box 
+            sx={{
+              width: '100%',
+              display: 'flex',
+            }}>
+
+              <Box className={styles.left} style={{display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center'}}>
+                <Box px={60} style={{color: 'white'}}>
+                <Typography className={styles.sectionHeader} variant="h3" sx={{mb: 2, fontWeight: 'bold' }}>UNTAPPED POTENTIAL</Typography> 
+                      
+                <Typography sx={{ fontWeight: 'light' }}>
+                  Let us help you build lasting technology that goes above and beyond in satisfying your needs.
+                  {/* We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs. */}
+                </Typography>
+                <Button 
+                  sx={{
+                    mt: 3, 
+                    color:"#FBB13C", 
+                    borderColor: "#FBB13C", 
+                    ':hover': {
+                      color: 'white',
+                      borderColor: "white"
+                    }
+                  }} 
+                  variant="outlined"
+                >
+                  Contact Us Now
+                </Button>
+
+                </Box>
+              </Box>
+
+              <div className={styles.right} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <Grid item xs={12} sm={12} md={6} sx={{display: 'flex', justifyContent: 'flex-start'}}>
+              
+                  <Box sx={{borderLeft: '2px solid #11151c'}} px={2}>
+                    <Box my={4}>
+                    <Typography sx={{fontSize: {xs: '1em', sm: '1.75em'} }} color="white">WEB</Typography>
+                    
+                    </Box>
+              
+                    <Box my={4}>
+                    <Typography sx={{fontSize: {xs: '1em', sm: '1.75em'} }}  color="white">MOBILE</Typography>
+                    </Box>
+              
+                    <Box my={4}>
+                    <Typography sx={{fontSize: {xs: '1em', sm: '1.75em'} }} color="white">CLOUD</Typography>
+                    </Box>
+                    
+                    <Button 
+                    sx={{
+                      mt: 3, 
+                      color:"#FBB13C", 
+                      backgroundColor: "#11151c",
+                      // borderColor: "#11151c", 
+                      ':hover': {
+                        color: '#11151c',
+                        borderColor: "#11151c",
+                      }
+                    }} 
+                    variant="outlined"
+                  >
+                    See Our Services
+                  </Button>
+                  </Box>
+
+                </Grid>
+              </div>
+              {/* TrianglesWithWords.png */}
+                {/* <Image
+                  src="/static/images/TrianglesWithWords.png"
+                  // objectFit="cover"
+                  width={800}
+                  height={600}
+                  
+                /> */}
+           
+                {/* <Image
+                  src="/static/images/mtns2.svg"
+                  objectFit="cover"
+                  width={800}
+                  height={600}
+                  
+                /> */}
+
+              {/* <div style={{flex: 1, border: '1px solid purple'}}>
+                <div style={{position: 'relative'}}>
+                  <div>
+                    <div className={styles.arrowUp} style={{  borderBottom: '600px solid red', left: 0}}></div>
+                  </div>
+
+                  <div>
+                    <div className={styles.arrowUp} style={{  borderBottom: '600px solid blue', left: 120,}}></div>
+                  </div>
+
+                  <div>
+                    <div className={styles.arrowUp} style={{  borderBottom: '600px solid green', left: 220}}></div>
+                  </div>
+                </div>
+              </div> */}
+          </Box>
 
 
-          <Grid
+
+          <Box py={20} px={4} sx={{textAlign: 'center', justifyContent: 'center', display: 'flex', 
+          // backgroundColor: "#F4F4F9"
+          }}>
+            <Box sx={{}}>
+              <Typography color="#757780" sx={{ fontWeight: 'light' }}>
+                YOUR SOFTWARE WILL BE
+              </Typography>
+              <Typography className={styles.sectionHeader} variant="h3" sx={{mb: 2, color: '#FBB13C', fontWeight: 'bold'}}>CONTINUOUSLY ADAPTABLE</Typography> 
+              
+              <Typography color="#757780" sx={{ fontWeight: 'light' }}>
+                IN A WORLD OF CONSTANT CHANGE
+              </Typography>
+            </Box>
+          </Box>
+
+
+
+
+
+          {/* <Grid
             container
             spacing={2}
             py={16}
@@ -86,8 +209,6 @@ const Home: NextPage = () => {
               margin: 0,
               width: '100%',
               backgroundColor: "#11151C",
-            
-
             }}
           >
           <Grid item xs={12} sm={12} md={6} sx={{display: 'flex', justifyContent: 'flex-start'}}>
@@ -123,7 +244,6 @@ const Home: NextPage = () => {
                       
                 <Typography color="#F4F4F9" sx={{ fontWeight: 'light' }}>
                   Let us help you build lasting technology that goes above and beyond in satisfying your needs. Our solutions utilize the latest web, mobile, and cloud technologies to optimize performance and open new doors of possibilities.
-                  {/* We specialize in the latest web, mobile and cloud technologies, frameworks and practices to optimize performance, build lasting technology and go above and beyond in satisfying your needs. */}
                 </Typography>
 
                 <Button 
@@ -142,7 +262,7 @@ const Home: NextPage = () => {
                 </Button>
             </Box>
          </Grid>    
-       </Grid>
+       </Grid> */}
           {/* END */}
 
       </main>

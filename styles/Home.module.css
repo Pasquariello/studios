@@ -76,3 +76,65 @@
     font-size: 2em;
   }
 }
+
+
+
+
+
+/*  */
+
+.left, .right {
+  position: relative;
+  height: 500px;
+  width: 200px;
+  background: #000;
+  float: left;
+}
+
+.left:after {
+  content: '';
+  line-height: 0;
+  font-size: 0;
+  width: 0;
+  height: 0;
+  border-top: 500px solid #11151c;
+  border-bottom: 120px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 120px solid transparent;
+  position: absolute;
+  top: 0;
+  right: -120px;
+}
+/* 
+.right {
+  margin-left: 60px;
+  width: 100px;
+} */
+
+.left {
+  flex: 1;
+  background: #11151c;
+
+}
+
+.right {
+  margin-left: 140px;
+  background: #FBB13C;
+  flex: 1
+}
+
+.right:before {
+  content: '';
+  line-height: 0;
+  font-size: 0;
+  width: 0;
+  height: 0;
+  border-top: 120px solid transparent;
+  border-bottom: 500px solid #FBB13C;
+  border-left: 120px solid transparent;
+  border-right: 0px solid #FBB13C;
+  position: absolute;
+  top: -120px;
+  left: -120px;
+}
+
