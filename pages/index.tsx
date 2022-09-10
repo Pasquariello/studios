@@ -59,9 +59,13 @@ const Home: NextPage = () => {
       >
 
 
-          <Box py={20} px={4} sx={{textAlign: 'center', justifyContent: 'center', display: 'flex',
-          //  backgroundColor: "#F4F4F9"
-        }}>
+          <Box py={20} px={4} 
+            sx={{
+              textAlign: 'center', 
+              justifyContent: 'center', 
+              display: 'flex',
+              // backgroundColor: "#F4F4F9"
+          }}>
             <Box sx={{maxWidth: 650}}>
               <Typography className={styles.sectionHeader} variant="h3" sx={{mb: 2, color: '#FBB13C', fontWeight: 'bold'}}>Modern Agile Development</Typography> 
               
@@ -72,14 +76,25 @@ const Home: NextPage = () => {
             </Box>
           </Box>
 
+          {/* Start HERE */}
+          
           <Box 
             sx={{
-              width: '100%',
-              display: 'flex',
+              // width: '100%',
+              display: {md: 'flex'},
             }}>
 
-              <Box className={styles.left} style={{display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center'}}>
-                <Box px={60} style={{color: 'white'}}>
+              <Box 
+                className={styles.left}
+                sx={{display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center'}}
+              >
+                
+                <Box 
+                  px={4}
+                  sx={{
+                    color: 'white', 
+                    // display: 'flex', height: '100%', flexDirection: 'column', justifyContent: 'space-between'
+                    }}>
                 <Typography className={styles.sectionHeader} variant="h3" sx={{mb: 2, fontWeight: 'bold' }}>UNTAPPED POTENTIAL</Typography> 
                       
                 <Typography sx={{ fontWeight: 'light' }}>
@@ -104,8 +119,20 @@ const Home: NextPage = () => {
                 </Box>
               </Box>
 
-              <div className={styles.right} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <Grid item xs={12} sm={12} md={6} sx={{display: 'flex', justifyContent: 'flex-start'}}>
+              <Box 
+                className={styles.right} 
+                sx={{
+                  marginLeft: {sm: '0', md: '140px'},
+                  display: 'flex', justifyContent: 'center', alignItems: 'center'}}
+              >
+               
+                <Box 
+                // item xs={12} sm={12} md={6} 
+                // px={{sm: 6, md: 8}}
+                  sx={{
+                    display: 'flex', justifyContent: 'flex-start', 
+                  }}
+                >
               
                   <Box sx={{borderLeft: '2px solid #11151c'}} px={2}>
                     <Box my={4}>
@@ -138,57 +165,33 @@ const Home: NextPage = () => {
                   </Button>
                   </Box>
 
-                </Grid>
-              </div>
-              {/* TrianglesWithWords.png */}
-                {/* <Image
-                  src="/static/images/TrianglesWithWords.png"
-                  // objectFit="cover"
-                  width={800}
-                  height={600}
-                  
-                /> */}
-           
-                {/* <Image
-                  src="/static/images/mtns2.svg"
-                  objectFit="cover"
-                  width={800}
-                  height={600}
-                  
-                /> */}
+                </Box>
+              </Box>
 
-              {/* <div style={{flex: 1, border: '1px solid purple'}}>
-                <div style={{position: 'relative'}}>
-                  <div>
-                    <div className={styles.arrowUp} style={{  borderBottom: '600px solid red', left: 0}}></div>
-                  </div>
-
-                  <div>
-                    <div className={styles.arrowUp} style={{  borderBottom: '600px solid blue', left: 120,}}></div>
-                  </div>
-
-                  <div>
-                    <div className={styles.arrowUp} style={{  borderBottom: '600px solid green', left: 220}}></div>
-                  </div>
-                </div>
-              </div> */}
           </Box>
+          
+          {/* End HERE */}
 
 
 
-          <Box py={20} px={4} sx={{textAlign: 'center', justifyContent: 'center', display: 'flex', 
+          <Box 
+            py={20} 
+            px={2} 
+            sx={{
+              flexDirection: 'column', textAlign: 'center', justifyContent: 'center', display: 'flex', 
           // backgroundColor: "#F4F4F9"
           }}>
-            <Box sx={{}}>
+            {/* <Box> */}
               <Typography color="#757780" sx={{ fontWeight: 'light' }}>
                 YOUR SOFTWARE WILL BE
               </Typography>
-              <Typography className={styles.sectionHeader} variant="h3" sx={{mb: 2, color: '#FBB13C', fontWeight: 'bold'}}>CONTINUOUSLY ADAPTABLE</Typography> 
+
+              <Typography className={styles.sectionHeader} sx={{my: 2, color: '#FBB13C', fontWeight: 'bold', fontSize: '2em'}}>CONTINUOUSLY ADAPTABLE</Typography> 
               
               <Typography color="#757780" sx={{ fontWeight: 'light' }}>
                 IN A WORLD OF CONSTANT CHANGE
               </Typography>
-            </Box>
+            {/* </Box> */}
           </Box>
 
 
