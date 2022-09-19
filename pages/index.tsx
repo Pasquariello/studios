@@ -5,15 +5,11 @@ import Image from 'next/image'
 import Link from 'next/link';
 import styles from '../styles/Home.module.css'
 
-import { Box, Button, Divider, Grid, Stack, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import ParticleComponent from '../components/ParticleComponent';
   
-import WebAssetIcon from '@mui/icons-material/WebAsset';
-import MobileScreenShareIcon from '@mui/icons-material/MobileScreenShare';
-import CloudQueueIcon from '@mui/icons-material/CloudQueue';
 
 import ReactTextTransition, { presets } from "react-text-transition";
-import { height, width } from '@mui/system';
 
 import MainLayout from '../Layouts/MainLayout';
 

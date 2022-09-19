@@ -34,17 +34,17 @@ const Services = () => {
     const focusAreas = [
         {
             title: 'MOBILE',
-            description: 'We use the latest technologies combined with a human-centric approach to build efficient and future proof web applications',
+            description: 'Whether your application is iOS, Android, or cross-platform, we can help you effectively deliver your product to the palm of your users\'s hands.',
             borderColor: 'rgb(251, 177, 60)',
         },
         {
             title: 'WEB',
-            description: 'We use the latest technologies combined with a human-centric approach to build efficient and future proof web applications',
+            description: 'We use the latest technologies combined with a human-centric approach to build efficient and future proof web applications.',
             borderColor: 'rgba(251, 177, 60, .75)',
         },
         {
             title: 'CLOUD',
-            description: 'Let us build your dream cloud architecture from the cloud up, using all the major cloud service providers (Google, AWS, and Azure)',
+            description: 'Let us build your dream cloud architecture from the cloud up, using all the major cloud service providers (Google, AWS, and Azure).',
             borderColor: 'rgba(251, 177, 60, .55)',
         },
     ]
