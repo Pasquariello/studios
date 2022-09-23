@@ -10,6 +10,8 @@ import ParticleComponent from '../components/ParticleComponent';
 import ContactForm from '../components/ContactForm';
 import { Description } from '@mui/icons-material';
 import Link from 'next/link';
+import Image from 'next/image'
+
 
 
 const ExpandMore = styled((props) => {
@@ -98,7 +100,18 @@ const Services = () => {
                 <ParticleComponent />  
             </header>
 
-            <Box py={10} px={4} sx={{display: 'flex', justifyContent: 'center'}}>
+            <div className={styles.bgImage}>
+            <Box py={10} px={4} sx={{display: 'flex', justifyContent: 'center'}}>            
+            {/* <Image 
+                        src="/static/images/Cascadian_Background3-01.svg"
+                        alt="Background Image" 
+                        className={styles.bgImage}
+                        // width={'100%'} height={'100%'}
+                        layout="fill"
+
+                        objectFit='cover'
+                        objectPosition='center'
+                    /> */}
                 <Box sx={{maxWidth: 800, textAlign: 'center'}}>
                     <Box mb={8}>
                         <Typography className={styles.sectionHeader} variant="h3" sx={{mb: 2, color: '#FBB13C'}}>                        
@@ -199,105 +212,8 @@ const Services = () => {
                     </Box>
                 </Box>
             </Box>
+            </div>
 
-            {/* <Box py={10} px={4} sx={{backgroundColor: "#F4F4F9"}}>
-                    <div style={{textAlign: 'center', marginBottom: 36}}>
-                        <Typography variant="h4" >Core Services</Typography>
-                    </div>
-
-                    <Stack display="flex" justifyContent="center" mb={'36px'} direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-                    <Card sx={{  maxWidth: 375, border: 'none' }}>
-                        <CardContent>
-                            <Typography gutterBottom component="div">
-                                Web
-                            </Typography>
-        
-                            <Typography variant="body2" color="text.secondary">
-                                We use the latest technologies combined with a human-centric approach to build efficient, and future-proof web applications 
-                            </Typography>
-                        </CardContent>
-
-                    </Card>
-
-                    <Card sx={{  maxWidth: 375  }}>
-                        <CardContent>
-                            <Typography gutterBottom component="div">
-                                Mobile
-                            </Typography>
-        
-                            <Typography variant="body2" color="text.secondary">
-                                Whether your application is iOS, Android hybrid or cross-platform, we can help you deliver your product to palm of your user&apos;s hands
-                            </Typography>
-                        </CardContent>
-                    </Card>
-
-                    </Stack>
-
-                    <Stack display="flex" justifyContent="center" direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 2, sm: 8, md: 16 }}>
-                    
-                    <div>
-                        <ul>
-                            <li className={styles.serviceListItem}><Typography color="#757780" sx={{ fontWeight: 'light' }}>PoC Development</Typography></li>
-                            <li className={styles.serviceListItem}><Typography color="#757780" sx={{ fontWeight: 'light' }}>Re-Engineering</Typography></li>
-                            <li className={styles.serviceListItem}><Typography color="#757780" sx={{ fontWeight: 'light' }}>Cloud Migration</Typography></li>
-                            <li className={styles.serviceListItem}><Typography color="#757780" sx={{ fontWeight: 'light' }}>PWA (Progressive Web Apps)</Typography></li>
-                        </ul>
-                    </div>
-
-                    <Divider orientation="vertical" />
-
-                    <div>
-                        <ul>
-                            <li className={styles.serviceListItem}><Typography color="#757780" sx={{ fontWeight: 'light' }}>Front-End Development</Typography></li>
-                            <li className={styles.serviceListItem}><Typography color="#757780" sx={{ fontWeight: 'light' }}>API</Typography></li>
-                            <li className={styles.serviceListItem}><Typography color="#757780" sx={{ fontWeight: 'light' }}>System Architecture</Typography></li>
-                            <li className={styles.serviceListItem}><Typography color="#757780" sx={{ fontWeight: 'light' }}>Cross-platform</Typography></li>
-                        </ul>
-                    </div>
-
-                    <Divider orientation="vertical" />
-
-                    <div>
-                        <ul>
-                            <li className={styles.serviceListItem}><Typography color="#757780" sx={{ fontWeight: 'light' }}>Security Best Practices</Typography></li>
-                            <li className={styles.serviceListItem}><Typography color="#757780" sx={{ fontWeight: 'light' }}>Back-end Development</Typography></li>
-                            <li className={styles.serviceListItem}><Typography color="#757780" sx={{ fontWeight: 'light' }}>Design</Typography></li>
-                            <li className={styles.serviceListItem}><Typography color="#757780" sx={{ fontWeight: 'light' }}>MVP</Typography></li>
-                        </ul>
-                    </div>
-                    </Stack>
-
-            </Box>
-
-            <Box py={10} px={4} sx={{display: 'flex', justifyContent: 'center'}}>
-                <Box sx={{maxWidth: 600}}>
-                    <Typography className={styles.sectionHeader} variant="h3" sx={{mb: 2, color: '#FBB13C', fontWeight: 'bold'}}>                        
-                        Obsessed With Your Success
-                    </Typography> 
-                
-                <Typography color="#757780" sx={{ fontWeight: 'light' }}>
-                We are fully invested in our clients.  Through our engagment we remain agile and adaptable, prioritizing your needs. Building a strong and sustaianable relationship with our clients is at the core of everything we do.
-                </Typography>
-                </Box>
-            </Box>
-             */}
-            {/* <Box
-                p={{
-                    xs: 2,
-                    md: 4
-                }}
-                mb={6}
-                sx={{
-                width: '100%',
-                display: 'flex',
-                justifyContent: 'center'
-
-                }}
-            >
-                <Box sx={{ width: 900 }}>
-                    <ContactForm />
-                </Box>
-            </Box> */}
         </MainLayout>
     )
 }
