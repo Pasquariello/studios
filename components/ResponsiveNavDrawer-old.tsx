@@ -43,7 +43,7 @@ export default function ResponsiveDrawer(props: Props) {
       <Typography px={2}>CASCADIAN</Typography>
       <Divider />
       <List>
-        {['Connect', 'Services'].map((text, index) => (
+        {['Connect', 'Services', 'Blog'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemText primary={text} />

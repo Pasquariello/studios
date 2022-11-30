@@ -16,6 +16,9 @@ const MainLayout = (props: LayoutProps) => {
     // const title: Props = props
     const router = useRouter();
 
+    const date = new Date(); 
+    const year = date.getFullYear();
+
     const { title, children } = props;
     return (
         <div style={{
@@ -35,16 +38,15 @@ const MainLayout = (props: LayoutProps) => {
             </main>
 
         <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
+        <Link href="/contact">
+        <a>
+          Cascadian Software LLC &copy; {year}
+          {/* Powered by{' '}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          </span> */}
         </a>
+        </Link>
       </footer>
         </div>
     )

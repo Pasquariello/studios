@@ -40,7 +40,7 @@ export default function ResponsiveDrawer(props: Props) {
       <Typography px={2}>CASCADIAN</Typography>
       <Divider />
       <List>
-        {['Connect', 'Services'].map((text, index) => (
+        {['Connect', 'Services', 'Blog'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemText primary={text} />
@@ -110,6 +110,11 @@ export default function ResponsiveDrawer(props: Props) {
         <li>
           <Link href="/contact">
             <a>Contact</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/blog">
+            <a>Blog</a>
           </Link>
         </li>
       </ul>
