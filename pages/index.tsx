@@ -7,7 +7,8 @@ import styles from '../styles/Home.module.css'
 
 import { Box, Button, Typography } from '@mui/material';
 import ParticleComponent from '../components/ParticleComponent';
-  
+import { useRouter } from 'next/router'
+
 
 import ReactTextTransition, { presets } from "react-text-transition";
 
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
 
   const texts = ["Engineering", "Designing", "Advising", "Delivering"];
   const [ textIndex, setTextIndex ] = useState(0);
+  const router = useRouter();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -108,6 +110,7 @@ const Home: NextPage = () => {
                     }
                   }} 
                   variant="outlined"
+                  onClick={() =>  router.push(`/contact`)}
                 >
                   Contact Us Now
                 </Button>
@@ -156,6 +159,7 @@ const Home: NextPage = () => {
                       }
                     }} 
                     variant="outlined"
+                    onClick={() =>  router.push(`/services`)}
                   >
                     See Our Services
                   </Button>
