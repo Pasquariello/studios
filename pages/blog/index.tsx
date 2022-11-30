@@ -14,7 +14,7 @@ const Blog = () => {
     const displayCount = 2;
     const pageCount = Math.ceil(articles.length / displayCount);
 
-    const handleCurrentPageDisplay = ({ list, currentPage, displayCount }) => {
+    const handleCurrentPageDisplay = ({ list, currentPage, displayCount }: any) => {
         let start = (currentPage - 1) *  displayCount;
         let end = start + displayCount;
 
@@ -36,7 +36,7 @@ const Blog = () => {
 
 
 
-    const renderArticle = (article) => {
+    const renderArticle = (article: any) => {
         const { id, title, preview } = article
         return (
             <Box key={id} sx={{border: '1px solid #ddd', my: 4, p: 2}} onClick={() => router.push(`/blog/${id}`) }>
@@ -99,7 +99,7 @@ const Blog = () => {
                     md: 16,
                 } 
             }}>
-                {displayData.map((article, i) => {
+                {displayData.map((article: any, i: number) => {
                     return (
                         renderArticle(article)
                     );
