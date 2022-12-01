@@ -3,7 +3,6 @@ import { Box, Typography } from "@mui/material";
 import ContactForm from '../../components/ContactForm';
 import { articles } from '../../utils/blogs';
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 
 const BlogPost = () => {
 
@@ -14,7 +13,6 @@ const BlogPost = () => {
 
     return (
         <MainLayout>
-            
             <Box 
                 sx={{ 
                     pt: 12, 
