@@ -14,7 +14,7 @@ export const articles = [
         id: 2,
         title: `How Outsourcing Cloud Development can Benefit your Business`,
         body: OutsourcingCloudDevelopment,
-        // image: '/static/images/andrew-neel-coffee.jpg',
+        image: '',
         preview: 'As the world increasingly moves online, businesses must adapt to remain competitive. One way to do this is by outsourcing cloud development. Cloud development is the process of developing and managing software applications that reside on a cloud computing platform. By outsourcing cloud development, businesses can benefit in several ways.'
     },
     // {
