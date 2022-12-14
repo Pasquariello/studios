@@ -11,7 +11,7 @@ import { articles } from '../../utils/blogs';
 const Blog = () => {
     const router = useRouter();
 
-    const displayCount = 2;
+    const displayCount = 10;
     const pageCount = Math.ceil(articles.length / displayCount);
 
     const handleCurrentPageDisplay = ({ list, currentPage, displayCount }: any) => {

@@ -1,6 +1,7 @@
 import { MVP } from './mvp';
 // import { Flutter } from './Flutter';
 import { OutsourcingCloudDevelopment } from './outsourcingCloudDevelopment';
+import { KubernetesOverkill } from './kubernetesOverkill';
 
 export const articles = [
     {
@@ -17,6 +18,13 @@ export const articles = [
         image: '',
         preview: 'As the world increasingly moves online, businesses must adapt to remain competitive. One way to do this is by outsourcing cloud development. Cloud development is the process of developing and managing software applications that reside on a cloud computing platform. By outsourcing cloud development, businesses can benefit in several ways.'
     },
+     {
+        id: 3,
+        title: `When Kubernetes is Overkill`,
+        body: KubernetesOverkill,
+        // image: '/static/images/andrew-neel-coffee.jpg',
+        preview: `In scenarios such as running a single service, or even multiple services that don't need to communicate with each other, Kubernetes is often overkill. Without the orchestration capabilities of Kubernetes, it can be simpler and cheaper to manage workloads directly on virtual machines (VMs). This approach also allows for more customization of the underlying infrastructure since all manual or scripted configuration can be done on the VMs themselves.`
+    }
     // {
     //     id: 3,
     //     title: `Why Choose Flutter For Your Next Cross-Platform Mobile Framework`,
