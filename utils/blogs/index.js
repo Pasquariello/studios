@@ -2,7 +2,7 @@ import { MVP } from './mvp';
 // import { Flutter } from './Flutter';
 import { OutsourcingCloudDevelopment } from './outsourcingCloudDevelopment';
 import { KubernetesOverkill } from './kubernetesOverkill';
-
+import { FlutterForYourNextApp } from './flutterForYourNextApp'
 export const articles = [
     {
         id: 1,
@@ -24,6 +24,13 @@ export const articles = [
         body: KubernetesOverkill,
         // image: '/static/images/andrew-neel-coffee.jpg',
         preview: `In scenarios such as running a single service, or even multiple services that don't need to communicate with each other, Kubernetes is often overkill. Without the orchestration capabilities of Kubernetes, it can be simpler and cheaper to manage workloads directly on virtual machines (VMs). This approach also allows for more customization of the underlying infrastructure since all manual or scripted configuration can be done on the VMs themselves.`
+    },
+    {
+        id: 4,
+        title: `Why Your Business Should Use Flutter For Its next Application`,
+        body: FlutterForYourNextApp,
+        // image: '/static/images/andrew-neel-coffee.jpg',
+        preview: `Are you looking for a cross-platform framework that lets you create beautiful web and mobile applications? Then you should definitely consider Flutter.`
     }
     // {
     //     id: 3,
