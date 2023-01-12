@@ -53,6 +53,6 @@ Conclusion
 </h3>
 
 <p>
-If you're looking for a way to quickly build high-quality, native iOS and Android apps from a single codebase, Flutter is the solution for you. Not only does it offer fast development and performance that rivals native apps, but it's also backed by a strong open source community. businesses can use Flutter to create cross-platform applications quickly and efficiently without compromising on quality. If you're interested in building your next app using Flutter, get in touch with us today! We would be more than happy to answer any questions you have or help getting started.
+If you're looking for a way to quickly build high-quality, native iOS and Android apps from a single codebase, Flutter is the solution for you. Not only does it offer fast development and performance that rivals native apps, but it's also backed by a strong open source community. Businesses can use Flutter to create cross-platform applications quickly and efficiently without compromising on quality. If you're interested in building your next app using Flutter, get in touch with us today! We would be more than happy to answer any questions you have or help getting started.
 </p>
 `
