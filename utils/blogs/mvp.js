@@ -44,9 +44,9 @@ One of the hardest parts about developing an MVP is sticking to the main feature
 </p>
 
 <ul>
-<li>rapid development and continuous progress;</li>
-<li>reduced maintenance costs since your product is less complex;</li>
-<li>faster release cycles to your customers which in turn means quicker feedback and improved iterations;</li>
+<li>rapid development and continuous progress.</li>
+<li>reduced maintenance costs since your product is less complex.</li>
+<li>faster release cycles to your customers which in turn means quicker feedback and improved iterations.</li>
 <li>and cheaper labor costs since you won't be paying for time intensive complex features.</li>
 </ul>
 

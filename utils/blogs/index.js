@@ -1,8 +1,10 @@
 import { MVP } from './mvp';
 // import { Flutter } from './Flutter';
+import { DevelopmentTrends23 } from './developmentTrends23';
 import { OutsourcingCloudDevelopment } from './outsourcingCloudDevelopment';
 import { KubernetesOverkill } from './kubernetesOverkill';
 import { FlutterForYourNextApp } from './flutterForYourNextApp'
+
 export const articles = [
     {
         id: 1,
@@ -31,7 +33,20 @@ export const articles = [
         body: FlutterForYourNextApp,
         // image: '/static/images/andrew-neel-coffee.jpg',
         preview: `Are you looking for a cross-platform framework that lets you create beautiful web and mobile applications? Then you should definitely consider Flutter.`
-    }
+    },
+    {
+        id: 5,
+        title: `Opinion Article: Use the Apollo Studio Explorer in a GraphQL Yoga Server`,
+        link: 'https://medium.com/@greg_96983/use-the-apollo-studio-explorer-in-a-graphql-yoga-server-45785c6ae3b4',
+        preview: `GraphQL Yoga is an excellent, lightweight GraphQL server. It’s easy to setup, has low cost in terms of required packages, and is very fast; caching is especially good. But one thing it lacks is the gorgeous Apollo Studio Explorer, which is an order of magnitude easier to use than GraphiQL.`
+    },
+    {
+        id: 6,
+        title: `Software Development Trends 2023`,
+        body: DevelopmentTrends23,
+        // image: '/static/images/andrew-neel-coffee.jpg',
+        preview: `Are you looking for a cross-platform framework that lets you create beautiful web and mobile applications? Then you should definitely consider Flutter.`
+    },
     // {
     //     id: 3,
     //     title: `Why Choose Flutter For Your Next Cross-Platform Mobile Framework`,

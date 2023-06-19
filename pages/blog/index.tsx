@@ -22,10 +22,10 @@ const Blog = () => {
     }
 
     const [ currentPage, setCurrentPage ] = useState(1);
-
     const initData = handleCurrentPageDisplay({list: articles, currentPage, displayCount});
-
     const [displayData, setDisplayData] = useState(initData);
+
+
 
     const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
         setCurrentPage(value);
@@ -35,11 +35,15 @@ const Blog = () => {
       };
 
 
-
     const renderArticle = (article: any) => {
-        const { id, title, preview } = article
+        const { id, title, preview, link } = article
+
+        const handlePush = () => {
+            link ? window.location.href = link :  router.push(`/blog/${id}`); 
+        }
+
         return (
-            <Box key={id} sx={{border: '1px solid #ddd', my: 4, p: 2}} onClick={() => router.push(`/blog/${id}`) }>
+            <Box key={id} sx={{border: '1px solid #ddd', my: 4, p: 2}} onClick={handlePush}>
                 <Box sx={{
                     display: {
                         sm: 'flex',
@@ -47,7 +51,6 @@ const Blog = () => {
                     justifyContent: 'space-between'
                 }}>
                     <h3>{title}</h3>
-                    {/* <p>{date}</p> */}
                 </Box>
                 
                  {preview && (
@@ -59,6 +62,16 @@ const Blog = () => {
             </Box>
         )
     }
+
+    const renderArticleList = () => (
+        displayData.map((article: any, i: number) => {
+            return (
+                renderArticle(article)
+            );
+        })
+    );
+
+    const renderPageCount = () => pageCount > 1 &&  <Pagination count={pageCount} variant="outlined" page={currentPage} onChange={handleChange}  />
 
     return (
         <MainLayout>
@@ -99,16 +112,8 @@ const Blog = () => {
                     md: 16,
                 } 
             }}>
-                {displayData.map((article: any, i: number) => {
-                    return (
-                        renderArticle(article)
-                    );
-                })}
-
-        {
-            pageCount > 1 &&  <Pagination count={pageCount} variant="outlined" page={currentPage} onChange={handleChange}  />
-        }
-
+                {renderArticleList()}
+                {renderPageCount()}
             </Box>
 
         </MainLayout>
