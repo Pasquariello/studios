@@ -45,7 +45,7 @@ export const articles = [
         title: `Software Development Trends 2023`,
         body: DevelopmentTrends23,
         // image: '/static/images/andrew-neel-coffee.jpg',
-        preview: `Are you looking for a cross-platform framework that lets you create beautiful web and mobile applications? Then you should definitely consider Flutter.`
+        preview: `Trends that developers and companies need to be aware of in order to stay ahead of the curve`
     },
     // {
     //     id: 3,
