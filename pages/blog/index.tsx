@@ -43,7 +43,7 @@ const Blog = () => {
         }
 
         return (
-            <Box key={id} sx={{border: '1px solid #ddd', my: 4, p: 2}} onClick={handlePush}>
+            <Box key={id} style={{cursor: 'pointer'}} sx={{border: '1px solid #ddd', my: 4, p: 2}} onClick={handlePush}>
                 <Box sx={{
                     display: {
                         sm: 'flex',
