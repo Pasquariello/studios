@@ -45,7 +45,7 @@ export const articles = [
         title: `Software Development Trends 2023`,
         body: DevelopmentTrends23,
         // image: '/static/images/andrew-neel-coffee.jpg',
-        preview: `Trends that developers and companies need to be aware of in order to stay ahead of the curve`
+        preview: `Development trends companies need to be aware of in order to stay ahead of the curve in 2023.`
     },
     // {
     //     id: 3,
