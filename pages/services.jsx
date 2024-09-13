@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Box, Button, Typography } from '@mui/material';
+import HeaderSm from '../components/headerSm';
 import { styled } from '@mui/material/styles';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -52,37 +53,7 @@ const Services = () => {
 
     return (
         <MainLayout title="Services">
-            <header
-                style={{
-                     display: 'flex', justifyContent: 'center', position: 'relative'}}
-            >
-                <div 
-                    style={{ padding: "80px 20px", maxWidth: '700px'}}
-                    className={styles.headerTextContainer} 
-                >
-               
-
-                        <Typography 
-                            mb={4}
-                            variant="h2"
-                            color="#F4F4F9"
-                        >
-                            SERVICES
-                        </Typography>
-                        
-
-                        {/* <Typography
-                            color="#F4F4F9"
-                            variant="body2"
-                            gutterBottom
-                            
-                        >
-                            We build <span style={{color: '#FBB13C'}}>custom software</span> to super charge your success, validate your vision and innovate the technology your compnay relies on. 
-                        </Typography>  */}
-                     
-                </div>
-                <ParticleComponent />  
-            </header>
+            <HeaderSm title={'Services'} />
 
             <div className={styles.bgImage}>
             <Box py={10} px={4} sx={{display: 'flex', justifyContent: 'center'}}>            

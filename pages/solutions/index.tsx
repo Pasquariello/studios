@@ -5,15 +5,15 @@ import { PRIMARY_TYPOGRAPHY } from '../../styles/style-constants';
 import { useRouter } from 'next/router'
 import ParticleComponent from '../../components/ParticleComponent';
 
-import { articles } from '../../utils/blogs';
+import { solutions } from '../../utils/solutions';
 import HeaderSm from '../../components/headerSm';
 
 
-const Blog = () => {
+const Solutions = () => {
     const router = useRouter();
 
     const displayCount = 10;
-    const pageCount = Math.ceil(articles.length / displayCount);
+    const pageCount = Math.ceil(solutions.length / displayCount);
 
     const handleCurrentPageDisplay = ({ list, currentPage, displayCount }: any) => {
         let start = (currentPage - 1) *  displayCount;
@@ -23,7 +23,7 @@ const Blog = () => {
     }
 
     const [ currentPage, setCurrentPage ] = useState(1);
-    const initData = handleCurrentPageDisplay({list: articles, currentPage, displayCount});
+    const initData = handleCurrentPageDisplay({list: solutions, currentPage, displayCount});
     const [displayData, setDisplayData] = useState(initData);
 
 
@@ -31,7 +31,7 @@ const Blog = () => {
     const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
         setCurrentPage(value);
 
-        const currentList = handleCurrentPageDisplay({list: articles, currentPage: value, displayCount});
+        const currentList = handleCurrentPageDisplay({list: solutions, currentPage: value, displayCount});
         setDisplayData(currentList)
       };
 
@@ -40,7 +40,7 @@ const Blog = () => {
         const { id, title, preview, link } = article
 
         const handlePush = () => {
-            link ? window.location.href = link :  router.push(`/blog/${id}`); 
+            link ? window.location.href = link :  router.push(`/solutions/${id}`); 
         }
 
         return (
@@ -59,7 +59,6 @@ const Blog = () => {
                         {`${preview.slice(0, 245)}...`}
                     </Box>
                  )}
-                {/* <Box sx={{color: PRIMARY_TYPOGRAPHY}} dangerouslySetInnerHTML={{ __html: `${preview.slice(0, 245)}&hellip;` }}/> */}
             </Box>
         )
     }
@@ -76,7 +75,7 @@ const Blog = () => {
 
     return (
         <MainLayout>
-         <HeaderSm title={'What We\'ve Been Talking About'} />
+            <HeaderSm title={'What We\'ve Accomplished'} />
             <Box sx={{
                 my: 4,
                 px: {
@@ -92,4 +91,4 @@ const Blog = () => {
     )
 }
 
-export default Blog;
+export default Solutions;

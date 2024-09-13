@@ -112,6 +112,11 @@ export default function ResponsiveDrawer(props: Props) {
             <a>Contact</a>
           </Link>
         </li>
+        {/* <li>
+          <Link href="/solutions">
+            <a>Solutions</a>
+          </Link>
+        </li> */}
         <li>
           <Link href="/blog">
             <a>Blog</a>

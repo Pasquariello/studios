@@ -4,11 +4,15 @@ import styles from '../styles/Services.module.css';
 import ParticleComponent from '../components/ParticleComponent';
 import { Box, Button, Card, CardActions, CardContent, Collapse, Divider, IconButton, Link, Stack, Typography } from '@mui/material';
 import Image from 'next/image';
+import HeaderSm from '../components/headerSm';
 
 const ContactPage = () => {
     return (
       <MainLayout title="Services">
-      <header
+        <HeaderSm title="Get In Touch" textAlign='left'>
+        Ready to <span style={{color: '#FBB13C'}}>start building,</span> looking to plan your next steps, or have any other questions? We are excited to hear from you!  
+        </HeaderSm>
+      {/* <header
           style={{
               // backgroundColor: "#11151C",
               position: 'relative',
@@ -39,7 +43,7 @@ const ContactPage = () => {
                
           </div>
           <ParticleComponent/>  
-      </header>
+      </header> */}
           <Box
             py={{
               xs: 8,
