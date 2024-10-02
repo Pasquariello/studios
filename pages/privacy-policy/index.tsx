@@ -75,7 +75,12 @@ const PrivacyPolicy = () => {
             <Paper 
                 elevation={3} 
                 sx={{
-                    m: 18,
+                    my: 9,
+                    mx: {
+                        xs: 2,
+                        md: 9,
+                        lg: 18,
+                    },
                     p: {
                         xs: 2,
                         md: 6,
