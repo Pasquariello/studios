@@ -47,6 +47,11 @@ const MainLayout = (props: LayoutProps) => {
           </span> */}
         </a>
         </Link>
+        <Link href="/privacy-policy">
+          <a>
+            Privacy Policy
+          </a>
+        </Link>
       </footer>
         </div>
     )
