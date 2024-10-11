@@ -1,10 +1,7 @@
 export const OvercomingOperationalChallenges = `
-	<h1 style="margin-bottom: 0">
-		Overcoming Operational Challenges: 
-		<h2 style="margin-top: 0">
-			How Automation Enhanced Clinician Efficiency and Improved Patient Care for a Virtual Health Platform
-		</h2>
-	</h1>
+	<h2>
+		Overcoming Operational Challenges: How Automation Enhanced Clinician Efficiency and Improved Patient Care for a Virtual Health Platform
+	</h2>
 	<p>10/10/24</p>
 	<h3>Executive Summary</h3>
 
