@@ -75,7 +75,7 @@ const Solutions = () => {
 
     return (
         <MainLayout>
-            <HeaderSm title={'What We\'ve Accomplished'} />
+            <HeaderSm title={'Client Case Studies'} />
             <Box sx={{
                 my: 4,
                 px: {
