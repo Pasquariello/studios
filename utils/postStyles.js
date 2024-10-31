@@ -18,6 +18,13 @@ export const PostStyles = `
 		#postContainer b, i, em, li::marker{ 
 			color: black
 		}
+
+        #postContainer hr {
+            color:#757780;
+            background:#757780;
+            height:1px;
+            border:none
+        }
  
     </style>
 `
