@@ -31,6 +31,7 @@ const SolutionPost = () => {
             {
                 solution?.body && (
                     <Box 
+                        id="postContainer"
                         sx={{
                             fontSize: '1.25em',
                             flex: 1,

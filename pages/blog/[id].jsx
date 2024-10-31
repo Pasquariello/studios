@@ -14,6 +14,7 @@ const BlogPost = () => {
     return (
         <MainLayout>
             <Box 
+                id="postContainer"
                 sx={{ 
                     pt: 12, 
                     gap: 8, 
