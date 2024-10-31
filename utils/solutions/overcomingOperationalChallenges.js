@@ -1,8 +1,30 @@
 export const OvercomingOperationalChallenges = `
+
+	<style>
+		body, h1, h2, h3, h4, h5, h6  {
+			font-family: "Roboto","Helvetica","Arial",sans-serif;
+			line-height: 1.5;
+			letter-spacing: 0.00938em;
+			color: #757780;
+			color: black
+		}
+		p, li { 
+			font-family: "Roboto","Helvetica","Arial",sans-serif;
+			font-weight: 400;
+			line-height: 1.5;
+			letter-spacing: 0.00938em;
+			color: #757780;
+			font-weight: 300;
+		}
+		b, i{ 
+			color: black
+		}
+	</style>
+
 	<h2>
 		Overcoming Operational Challenges: How Automation Enhanced Clinician Efficiency and Improved Patient Care for a Virtual Health Platform
 	</h2>
-	<p>10/10/24</p>
+
 	<h3>Executive Summary</h3>
 
 	<p>
