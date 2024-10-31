@@ -27,16 +27,6 @@ const BlogPost = () => {
                     flex: 1,
                 }}
             >
-            {/* {blog?.image &&   ( 
-                <Box sx={{border: '1px solid'}} width={300}>
-                <Image
-                layout="fill"
-                src={blog.image}
-                alt="coffee"
-                width={300}
-                />
-                </Box>
-            )} */}
 
             {
                 blog?.body && (

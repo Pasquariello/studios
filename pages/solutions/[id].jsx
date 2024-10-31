@@ -27,16 +27,6 @@ const SolutionPost = () => {
                     flex: 1,
                 }}
             >
-            {/* {solution?.image &&   ( 
-                <Box sx={{border: '1px solid'}} width={300}>
-                <Image
-                layout="fill"
-                src={solution.image}
-                alt="coffee"
-                width={300}
-                />
-                </Box>
-            )} */}
 
             {
                 solution?.body && (

@@ -89,7 +89,7 @@ export default function ResponsiveDrawer(props: Props) {
               height={45}
             />
           </div>
-          <p><b>CASCADIAN</b></p>
+          <p><b>CASCADIAN DUDE</b></p>
         </div>
       </a>
       {/* <a className={styles.brand_title}></a> */}

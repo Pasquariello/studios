@@ -1,3 +1,5 @@
+import {PostStyles} from '../postStyles';
+
 export const OvercomingOperationalChallenges = `
 
 	${PostStyles}

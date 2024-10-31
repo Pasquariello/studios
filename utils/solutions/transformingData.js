@@ -1,3 +1,4 @@
+import {PostStyles} from '../postStyles';
 
 export const TransformingData = `
 	${PostStyles}
