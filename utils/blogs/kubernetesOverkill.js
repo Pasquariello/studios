@@ -1,4 +1,7 @@
+import {PostStyles} from '../postStyles';
+
 export const KubernetesOverkill = `
+${PostStyles}
 <h1 style="margin-bottom: 0;">When Kubernetes is Overkill</h1>
 
 <p>

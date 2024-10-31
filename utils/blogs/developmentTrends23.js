@@ -1,4 +1,10 @@
-export const DevelopmentTrends23 = `<h1 style="margin-bottom: 0;">Software Development Trends 2023</h1>
+import {PostStyles} from '../postStyles';
+
+export const DevelopmentTrends23 = `
+
+${PostStyles}
+
+<h1 style="margin-bottom: 0;">Software Development Trends 2023</h1>
 
 <p>
 The software development industry is an ever-changing landscape. Every year, there are new trends that developers and companies need to be aware of in order to stay ahead of the curve. 2023 is no exception! Here are some of the top software development trends you should keep your eye on: 

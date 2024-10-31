@@ -1,4 +1,8 @@
-export const OutsourcingCloudDevelopment = `<h1 style="margin-bottom: 0;">How Outsourcing Cloud Development can Benefit your Business</h1>
+import {PostStyles} from '../postStyles';
+
+export const OutsourcingCloudDevelopment = `
+${PostStyles}
+<h1 style="margin-bottom: 0;">How Outsourcing Cloud Development can Benefit your Business</h1>
 
 <p>
 As the world increasingly moves online, businesses must adapt to remain competitive. One way to do this is by outsourcing cloud development. Cloud development is the process of developing and managing software applications that reside on a cloud computing platform. By outsourcing cloud development, businesses can benefit in several ways.

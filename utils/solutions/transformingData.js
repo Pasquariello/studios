@@ -1,25 +1,6 @@
 
 export const TransformingData = `
-	<style>
-		body, h1, h2, h3, h4, h5, h6  {
-			font-family: "Roboto","Helvetica","Arial",sans-serif;
-			line-height: 1.5;
-			letter-spacing: 0.00938em;
-			color: #757780;
-			color: black
-		}
-		p, li { 
-			font-family: "Roboto","Helvetica","Arial",sans-serif;
-			font-weight: 400;
-			line-height: 1.5;
-			letter-spacing: 0.00938em;
-			color: #757780;
-			font-weight: 300;
-		}
-		b, i{ 
-			color: black
-		}
-	</style>
+	${PostStyles}
 
     <h2>Transforming Data Handling for Insurance Analytics Tool</h2>
 
@@ -116,7 +97,7 @@ export const TransformingData = `
     </p>
 
     <hr>
-    
+
     <p>
         Ready to transform your business? <a href="https://www.cascadiansoftware.com/contact" style="color: #FBB13C; text-decoration: underline">Book a demo</a> with Cascadian Software today and discover how we can help you achieve similar success.
     </p>

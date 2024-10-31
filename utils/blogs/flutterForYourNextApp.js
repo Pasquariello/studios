@@ -1,4 +1,7 @@
+import {PostStyles} from '../postStyles';
+
 export const FlutterForYourNextApp = `
+${PostStyles}
 <h1 style="margin-bottom: 0;">
 Why Your Business Should Use Flutter For Its Next Application
 </h1>

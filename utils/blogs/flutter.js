@@ -1,4 +1,8 @@
-export const Flutter = `<h1 style="margin-bottom: 0;">Why Choose Flutter For Your Next Cross-Platform Mobile Framework</h1>
+import {PostStyles} from '../postStyles';
+
+export const Flutter = `
+${PostStyles}
+<h1 style="margin-bottom: 0;">Why Choose Flutter For Your Next Cross-Platform Mobile Framework</h1>
 
 <p>
 If you're looking for a superior cross-platform mobile framework, look no further than Flutter. In this blog post, we'll explore why Flutter is the best option for developers who want to create amazing apps that work on both iOS and Android devices. Trust us - you won't be disappointed!

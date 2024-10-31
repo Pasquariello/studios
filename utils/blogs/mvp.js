@@ -1,4 +1,8 @@
-export const MVP = `<h1 style="margin-bottom: 0;">Your Morning Coffee is Like an MVP</h1>
+import {PostStyles} from '../postStyles';
+
+export const MVP = `
+${PostStyles}
+<h1 style="margin-bottom: 0;">Your Morning Coffee is Like an MVP</h1>
 <p style="margin-top: 0"><em>Three Reasons to Start Brewing an MVP Today</em></p>
 <br>
 
