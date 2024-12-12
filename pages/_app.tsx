@@ -9,14 +9,14 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Component {...pageProps} />
       <Analytics />
-      <Script type="text/javascript">
+      <Script type="text/javascript" id="linkedIn">
         {`
-_linkedin_partner_id = "6683602";
+_linkedin_partner_id = ${process.env.LINKEDIN_ID};
 window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
 window._linkedin_data_partner_ids.push(_linkedin_partner_id);
 `}
 </Script>
-<Script type="text/javascript">
+<Script type="text/javascript" id="linkedIn-tracking">
 {`
 (function(l) {
 if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
