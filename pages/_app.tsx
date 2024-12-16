@@ -2,7 +2,8 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app';
 import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script';
-
+import Image from 'next/image';
+import styles from '../Layouts/MainLayout.module.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -29,7 +30,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           `}
       </Script>
       <noscript>
-        <img height="1" width="1" style={{display:'none'}} alt="" src="https://px.ads.linkedin.com/collect/?pid=6683602&fmt=gif" />
+        <Image width={100} 
+        height={100} className={styles.hide} alt="" src="https://px.ads.linkedin.com/collect/?pid=6683602&fmt=gif" />
       </noscript>
     </>
   )
