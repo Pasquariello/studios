@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Analytics />
       <Script id="linkedIn">
         {`
-          _linkedin_partner_id = ${process.env.LINKEDIN_ID};
+          _linkedin_partner_id = 6683602;
           window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
           window._linkedin_data_partner_ids.push(_linkedin_partner_id);
         `}
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           `}
       </Script>
       <noscript>
-        <img height="1" width="1" style={{display:'none'}} alt="" src={`https://px.ads.linkedin.com/collect/?pid=${process.env.LINKEDIN_ID}&fmt=gif`} />
+        <img height="1" width="1" style={{display:'none'}} alt="" src="https://px.ads.linkedin.com/collect/?pid=6683602&fmt=gif" />
       </noscript>
     </>
   )
