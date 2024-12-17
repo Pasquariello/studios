@@ -5,14 +5,14 @@ export default function Document() {
     <Html>
       <Head>
         <link rel="shortcut icon" href="/static/images/favicon.png" />
-        <script id="linkedIn">
+        <script script type="text/javascript">
         {`
           _linkedin_partner_id = 6683602;
           window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
           window._linkedin_data_partner_ids.push(_linkedin_partner_id);
         `}
       </script>
-      <script id="linkedIn-tracking">
+      <script script type="text/javascript">
           {`
           (function(l) {
           if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
