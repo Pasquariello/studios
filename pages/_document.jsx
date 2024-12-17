@@ -1,19 +1,18 @@
 import { Html, Head, Main, NextScript, Footer } from 'next/document'
-import Script from 'next/script'
 
 export default function Document() {
   return (
     <Html>
       <Head>
         <link rel="shortcut icon" href="/static/images/favicon.png" />
-        <Script id="linkedIn">
+        <script id="linkedIn">
         {`
           _linkedin_partner_id = 6683602;
           window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
           window._linkedin_data_partner_ids.push(_linkedin_partner_id);
         `}
-      </Script>
-      <Script id="linkedIn-tracking">
+      </script>
+      <script id="linkedIn-tracking">
           {`
           (function(l) {
           if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
@@ -24,7 +23,7 @@ export default function Document() {
           b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
           s.parentNode.insertBefore(b, s);})(window.lintrk);
           `}
-      </Script>
+      </script>
       <noscript>
         <img height="1" width="1" style={{display:'none'}} alt="" src="https://px.ads.linkedin.com/collect/?pid=6683602&fmt=gif" />
       </noscript>
