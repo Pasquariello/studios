@@ -3,7 +3,8 @@ import { MVP } from './mvp';
 import { DevelopmentTrends23 } from './developmentTrends23';
 import { OutsourcingCloudDevelopment } from './outsourcingCloudDevelopment';
 import { KubernetesOverkill } from './kubernetesOverkill';
-import { FlutterForYourNextApp } from './flutterForYourNextApp'
+import { FlutterForYourNextApp } from './flutterForYourNextApp';
+import {nextJSForClients} from './nextjs';
 
 export const articles = [
     {
@@ -47,6 +48,14 @@ export const articles = [
         // image: '/static/images/andrew-neel-coffee.jpg',
         preview: `Development trends companies need to be aware of in order to stay ahead of the curve in 2023.`
     },
+    {
+        id: 7,
+        title: `Why We Recommend Next.js to Our Clients`,
+        body: nextJSForClients,
+        // image: '/static/images/andrew-neel-coffee.jpg',
+        preview: `When it comes to building fast, efficient, and scalable web applications, choosing the right tools and technology can make all the difference.`
+    },
+    
     // {
     //     id: 3,
     //     title: `Why Choose Flutter For Your Next Cross-Platform Mobile Framework`,
